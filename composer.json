@@ -1,0 +1,5 @@
+{
+    "require": {
+        "appstract/laravel-opcache": "^4.0"
+    }
+}
