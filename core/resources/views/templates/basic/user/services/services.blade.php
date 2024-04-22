@@ -108,10 +108,10 @@
                                     <label>Choose Category</label>
 
                                     <select name="cat" class="form-control" id="country-dropdown">
-                                        @foreach($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->name }}
+                                        <option value="">Choose Category</option>
+                                            @foreach($categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
                                             @endforeach
-
                                     </select>
 
 
