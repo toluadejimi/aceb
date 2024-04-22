@@ -364,7 +364,7 @@
         var num1 = document.getElementById('num1').value; // convert it to a float
         var rate = document.getElementById('price').value; // convert it to a float
 
-        var result =  document.getElementById('result2').value = Number(num1) * Number(rate);
+        var result =  document.getElementById('result2').value = Number(num1) * Number(rate) / 1000;
 
         console.log(result);
         console.log(num1);
