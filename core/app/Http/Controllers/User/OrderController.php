@@ -35,12 +35,10 @@ class OrderController extends Controller
 
 		$price = ($service->price_per_k * $request->qty) / 1000;
 
-           dd($price);
-
 
 		if ($user->balance < $price) {
 			$notify = "Insufficient balance. Please deposit and try again";
-			return to_route('user.deposit.index')->with('error',$notify);
+			return redirect('/user/deposit/index')->with('error',$notify);
 		}
 
 
