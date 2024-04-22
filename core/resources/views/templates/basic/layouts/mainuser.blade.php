@@ -364,7 +364,6 @@ Footer start
 <script src="{{url('')}}/assets/dash/js/custom.min.js" type="text/javascript"></script>
 <script src="{{url('')}}/assets/dash/js/deznav-init.js" type="text/javascript"></script>
 <script src="{{url('')}}/assets/dash/js/demo.js" type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/js/styleSwitcher.js" type="text/javascript"></script>
 
 
 </body>
