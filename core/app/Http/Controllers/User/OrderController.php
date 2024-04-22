@@ -33,7 +33,9 @@ class OrderController extends Controller
 		    }
 
 
-		$price = $service->price_per_k * $request->qty / 1000;
+		$price = ($service->price_per_k * $request->qty) / 1000;
+
+           dd($price);
 
 
 		if ($user->balance < $price) {
