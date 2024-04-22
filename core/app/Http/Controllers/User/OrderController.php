@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
 	public function order(Request $request)
-    
+
 	{
 
 
@@ -28,8 +28,8 @@ class OrderController extends Controller
 
 
            if ($request->min > $request->qty) {
-			$notify[] = ["error", 'Quantity must be higher than the minimum order'];
-			return back()->withNotify($notify);
+			$notify = "Quantity must be higher than the minimum order";
+			return back()->with("error", $notify);
 		    }
 
 
@@ -37,11 +37,11 @@ class OrderController extends Controller
 
 
 		if ($user->balance < $price) {
-			$notify[] = ["error", 'Insufficient balance. Please deposit and try again'];
-			return to_route('user.deposit.index')->withNotify($notify);
+			$notify = "Insufficient balance. Please deposit and try again";
+			return to_route('user.deposit.index')->with('error',$notify);
 		}
 
-     
+
 
 
 		$user->balance -= $price;
@@ -60,7 +60,7 @@ class OrderController extends Controller
 		$transaction->save();
 
 
-     
+
 
         $url = ApiProvider::where('id', 1)->first()->api_url;
         $api_key = ApiProvider::where('id', 1)->first()->api_key;
@@ -78,7 +78,7 @@ class OrderController extends Controller
         $err = $response->error ?? null;
 
 
-        
+
 
         if($res > 0){
         //Make order
@@ -124,8 +124,8 @@ class OrderController extends Controller
 			'price'        => $price,
 			'post_balance' => getAmount($user->balance),
 		]);
-		$notify[] = ['success', 'Successfully placed your order!'];
-		return back()->withNotify($notify);
+		$notify ="Successfully placed your order";
+		return back()->with('message',$notify);
 	}
 
 	public function history()
