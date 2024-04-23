@@ -63,7 +63,7 @@ class PaymentController extends Controller
 
         $message = Auth::user()->email. "| wants to fund |  NGN ".number_format($request->amount)." | with ref | $ref |  on ACEBOOSTSS";
         send_notification_2($message);
-        send_notification_3($message);
+
 
 
         return Redirect::to($url);
@@ -84,7 +84,7 @@ class PaymentController extends Controller
 
             $message = Auth::user()->email. "| Cancled |  NGN ".number_format($request->amount)." | with ref | $trx_id |  on ACEBOOSTSS";
             send_notification_2($message);
-            send_notification_3($message);
+
 
 
             Deposit::where('trx', $trx_id)->where('status', 0)->update(['status' => 3]);
@@ -159,7 +159,7 @@ class PaymentController extends Controller
 
             $message = Auth::user()->email. "| Just funded |  NGN ".number_format($request->amount)." | with ref | $order_id |  on ACEBOOSTSS";
             send_notification_2($message);
-            send_notification_3($message);
+
 
 
 

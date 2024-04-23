@@ -1,23 +1,23 @@
 <?php
 
 use App\Constants\Status;
-use App\Lib\GoogleAuthenticator;
-use App\Models\Extension;
-use App\Models\Frontend;
-use App\Models\GeneralSetting;
-use Carbon\Carbon;
 use App\Lib\Captcha;
 use App\Lib\ClientInfo;
 use App\Lib\CurlRequest;
 use App\Lib\FileManager;
+use App\Lib\GoogleAuthenticator;
+use App\Models\Extension;
+use App\Models\Frontend;
+use App\Models\GeneralSetting;
 use App\Notify\Notify;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 
 function systemDetails()
 {
-    $system['name']          = 'SMMLab';
-    $system['version']       = '2.0';
+    $system['name'] = 'SMMLab';
+    $system['version'] = '2.0';
     $system['build_version'] = '4.3.6';
     return $system;
 }
@@ -31,7 +31,7 @@ function verificationCode($length)
 {
     if ($length == 0) return 0;
     $min = pow(10, $length - 1);
-    $max = (int) ($min - 1) . '9';
+    $max = (int)($min - 1) . '9';
     return random_int($min, $max);
 }
 
@@ -206,7 +206,7 @@ function notify($user, $templateName, $shortCodes = null, $sendVia = null, $crea
     ];
 
     if (gettype($user) == 'array') {
-        $user = (object) $user;
+        $user = (object)$user;
     }
 
     $shortCodes = array_merge($shortCodes ?? [], $globalShortCodes);
@@ -427,7 +427,6 @@ function gs()
 }
 
 
-
 function resolve_complete($order_id)
 {
 
@@ -500,11 +499,12 @@ function verify_trx($trx)
     ]);
 }
 
-function session_resolve($ref, $session_id){
+function session_resolve($ref, $session_id)
+{
 
     $curl = curl_init();
 
-    $databody= array(
+    $databody = array(
         'session_id' => "$session_id",
         'ref' => "$ref"
 
@@ -541,64 +541,62 @@ function session_resolve($ref, $session_id){
 }
 
 
-
-
 function send_notification($message)
-    {
+{
 
-        $curl = curl_init();
+    $curl = curl_init();
 
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://api.telegram.org/bot6140179825:AAGfAmHK6JQTLegsdpnaklnhBZ4qA1m2c64/sendMessage?chat_id=1316552414',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => array(
-                'chat_id' => "1316552414",
-                'text' => $message,
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://api.telegram.org/bot6140179825:AAGfAmHK6JQTLegsdpnaklnhBZ4qA1m2c64/sendMessage?chat_id=1316552414',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => array(
+            'chat_id' => "1316552414",
+            'text' => $message,
 
-            ),
-            CURLOPT_HTTPHEADER => array(),
-        ));
+        ),
+        CURLOPT_HTTPHEADER => array(),
+    ));
 
-        $var = curl_exec($curl);
-        curl_close($curl);
+    $var = curl_exec($curl);
+    curl_close($curl);
 
-        $var = json_decode($var);
-    }
+    $var = json_decode($var);
+}
 
 
-    function send_notification2($message)
-    {
+function send_notification_2($message)
+{
 
-        $curl = curl_init();
+    $curl = curl_init();
 
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://api.telegram.org/bot6738516671:AAFw_Cg3QZC9Q6X8gYDgV9BR6cxj8F9H1hU/sendMessage?chat_id=5831063571',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => array(
-                'chat_id' => "5831063571",
-                'text' => $message,
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://api.telegram.org/bot6738516671:AAFw_Cg3QZC9Q6X8gYDgV9BR6cxj8F9H1hU/sendMessage?chat_id=5831063571',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => array(
+            'chat_id' => "5831063571",
+            'text' => $message,
 
-            ),
-            CURLOPT_HTTPHEADER => array(),
-        ));
+        ),
+        CURLOPT_HTTPHEADER => array(),
+    ));
 
-        $var = curl_exec($curl);
-        curl_close($curl);
+    $var = curl_exec($curl);
+    curl_close($curl);
 
-        $var = json_decode($var);
-    }
+    $var = json_decode($var);
+}
 
 
 
