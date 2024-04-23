@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="ACEBOOST">
+    <meta name="description" content="ACEBOOSTS">
     <meta name="author" content="Greyhound-Tech-Solutions">
     <!-- =============== PAGE TITLE =============== -->
-    <title>ACEBOOST</title>
+    <title>ACEBOOSTS</title>
     <!-- ============= FAVICON ICON ============= -->
     <link rel="shortcut icon" href="{{url('')}}/assets/home/img/favicon.ico" />
     <!-- ============= CSS ============= -->
@@ -123,7 +123,7 @@
                 <div class="section-title">
                     <h2 class="section-heading">Why Choose Us</h2>
                     <div class="about-content d-flex justify-content-center">
-                        <p class="text-white text-center">ACEBOOST.com has gained customers acknowledgement in such a short time; it is the most affordable SMM Panel & Reseller SMM services provider in the present time. Therefore if you are looking for the most economical smm platform for social media marketing, then you are at the right place. We ensure you for the price; no one else can offer your wide range of service at such a low cost like us.SMM panel is used to promote the brand on the social media platforms such as Facebook SMM Panel, Instagram SMM Panel. </p>
+                        <p class="text-white text-center">ACEBOOSTS.com has gained customers acknowledgement in such a short time; it is the most affordable SMM Panel & Reseller SMM services provider in the present time. Therefore if you are looking for the most economical smm platform for social media marketing, then you are at the right place. We ensure you for the price; no one else can offer your wide range of service at such a low cost like us.SMM panel is used to promote the brand on the social media platforms such as Facebook SMM Panel, Instagram SMM Panel. </p>
                     </div>
                 </div>
             </div>
@@ -165,10 +165,10 @@
         <div class="footer-wrapper footer-bg-block" style="background-image: url('{{url('')}}/assets/home/img/footer-bg.png')" >
             <div class="container">
                 <div class="section-title text-center">
-                    <h2 class="section-heading">ACEBOOST</h2>
+                    <h2 class="section-heading">ACEBOOSTS</h2>
                     <div class="text-center">
                         <h1>Get on board<br>
-                            Get a free account on Aceboost today </h1>
+                            Get a free account on ACEBOOSTS today </h1>
                     </div>
                     <div class="footer-contact-btn"><a href="/user/register">Get Started <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="sm_svg"><path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z"/></svg></a></div>
                 </div>
@@ -179,7 +179,7 @@
         <div class="copyright">
             <div class="container">
                 <div class="copy-content d-flex align-items-center justify-content-between">
-                    <div class="copy-text">@2024 - All Rights Reserved ACEBOOST</div>
+                    <div class="copy-text">@2024 - All Rights Reserved ACEBOOSTS</div>
                 </div>
             </div>
         </div>

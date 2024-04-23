@@ -201,10 +201,10 @@ class UserController extends Controller
         $trx = Deposit::where('trx', $request->trx)->first()->status ?? null;
         if($trx == null){
 
-            $message = Auth::user()->email. "is trying to reslove a deleted transaction on PALASH SMM";
+            $message = Auth::user()->email. "is trying to reslove a deleted transaction on ACEBOOSTSS";
             send_notification($message);
 
-            $message = Auth::user()->email. "is trying to reslove a deleted transaction on PALASH SMM";
+            $message = Auth::user()->email. "is trying to reslove a deleted transaction on ACEBOOSTSS";
             send_notification2($message);
             send_notification3($message);
 
@@ -218,11 +218,11 @@ class UserController extends Controller
 
         if($chk == 2 || $chk == 4 ){
 
-            $message = Auth::user()->email. "is trying to steal hits the endpoint twice on Palash SMM";
+            $message = Auth::user()->email. "is trying to steal hits the endpoint twice on ACEBOOSTSS";
             send_notification($message);
 
 
-            $message = Auth::user()->email. "is trying to steal hits the endpoint twice on  Palash SMM";
+            $message = Auth::user()->email. "is trying to steal hits the endpoint twice on  ACEBOOSTSS";
             send_notification2($message);
             send_notification3($message);
 
@@ -255,12 +255,12 @@ class UserController extends Controller
             $data->status          = 5;
 
 
-            $message = Auth::user()->email. "| just resolved with $request->session_id | NGN ".number_format($amount)." on PALASH SMM";
+            $message = Auth::user()->email. "| just resolved with $request->session_id | NGN ".number_format($amount)." on ACEBOOSTSS";
             send_notification($message);
 
 
 
-            $message = Auth::user()->email. "| just resolved with $request->session_id | NGN ".number_format($amount)." on PALASH SMM";
+            $message = Auth::user()->email. "| just resolved with $request->session_id | NGN ".number_format($amount)." on ACEBOOSTSS";
             send_notification2($message);
             send_notification3($message);
 
@@ -346,7 +346,7 @@ class UserController extends Controller
             $data->status          = 5;
 
 
-            $message = Auth::user()->email. "| just resolved with $request->session_id | NGN ".number_format($amount)." on PALASH";
+            $message = Auth::user()->email. "| just resolved with $request->session_id | NGN ".number_format($amount)." on ACEBOOSTSS";
             send_notification($message);
 
             return back()->with('message', "Transaction successfully Resolved, NGN $amount added to ur wallet");

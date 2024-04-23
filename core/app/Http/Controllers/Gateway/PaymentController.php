@@ -61,7 +61,7 @@ class PaymentController extends Controller
 
         $data->save();
 
-        $message = Auth::user()->email. "| wants to fund |  NGN ".number_format($request->amount)." | with ref | $ref |  on PALASH";
+        $message = Auth::user()->email. "| wants to fund |  NGN ".number_format($request->amount)." | with ref | $ref |  on ACEBOOSTSS";
         send_notification2($message);
         send_notification3($message);
 
@@ -82,7 +82,7 @@ class PaymentController extends Controller
 
         if ($status == 'failed') {
 
-            $message = Auth::user()->email. "| Cancled |  NGN ".number_format($request->amount)." | with ref | $trx_id |  on PALASH";
+            $message = Auth::user()->email. "| Cancled |  NGN ".number_format($request->amount)." | with ref | $trx_id |  on ACEBOOSTSS";
             send_notification2($message);
             send_notification3($message);
 
@@ -157,7 +157,7 @@ class PaymentController extends Controller
             $var = json_decode($var);
 
 
-            $message = Auth::user()->email. "| Just funded |  NGN ".number_format($request->amount)." | with ref | $order_id |  on PALASH";
+            $message = Auth::user()->email. "| Just funded |  NGN ".number_format($request->amount)." | with ref | $order_id |  on ACEBOOSTSS";
             send_notification2($message);
             send_notification3($message);
 

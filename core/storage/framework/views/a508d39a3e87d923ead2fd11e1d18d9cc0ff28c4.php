@@ -4,4 +4,4 @@
         <?php echo $__env->yieldPushContent('breadcrumb-plugins'); ?>
     </div>
 </div>
-<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/aceboost/core/resources/views/admin/partials/breadcrumb.blade.php ENDPATH**/ ?>
+<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/ACEBOOSTS/core/resources/views/admin/partials/breadcrumb.blade.php ENDPATH**/ ?>

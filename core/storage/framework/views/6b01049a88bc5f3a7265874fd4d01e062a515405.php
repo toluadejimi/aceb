@@ -35,4 +35,4 @@
 </body>
 
 </html>
-<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/aceboost/core/resources/views/errors/404.blade.php ENDPATH**/ ?>
+<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/ACEBOOSTS/core/resources/views/errors/404.blade.php ENDPATH**/ ?>

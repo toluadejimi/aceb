@@ -2,11 +2,11 @@
 <html lang="en" class="h-100">
 <head>
     <!-- Title -->
-    <title>Aceboost | Register</title>
+    <title>ACEBOOSTS | Register</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="AceBoost">
+    <meta name="author" content="ACEBOOSTS">
     <meta name="robots" content="">
     <meta name="csrf-token" content="FefTGetU1RFbLEkeFzaTmhDS3ELvrQmLuUYPdybs">
     <meta name="keywords"
@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Some description for the page">
     <meta property="og:title" content="Social Media Boost">
-    <meta property="og:description" content="Aceboost | Register">
+    <meta property="og:description" content="ACEBOOSTS | Register">
     <meta name="format-detection" content="telephone=no">
 
     <!-- Mobile Specific -->

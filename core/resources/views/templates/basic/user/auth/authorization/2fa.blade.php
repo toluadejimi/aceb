@@ -4,7 +4,7 @@
 
 <head>
    <!-- PAGE TITLE HERE -->
-   <title>PALASH - BEST SMM</title>
+   <title>ACEBOOSTSS - BEST SMM</title>
 
 
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
     <meta name="author" content="Dexignlabs">
     <meta name="robots" content="index, follow">
 
-    <meta name="keywords" content="palash, smm, social media, boost">
+    <meta name="keywords" content="ACEBOOSTSS, smm, social media, boost">
 
 
     <meta name="description" content="Elevate your administrative efficiency and enhance productivity with the Fillow SaaS Admin Dashboard Template. Designed to streamline your tasks, this powerful tool provides a user-friendly interface, robust features, and customizable options, making it the ideal choice for managing your data and operations with ease.">
@@ -66,23 +66,23 @@
 
                     <div class="card mb-0 h-auto">
 
-                       
+
 
                         <div class="card-body">
 
-                          
+
 
                             <div class="text-center mb-3">
                                 <a href="index.html"><img class="logo-auth" src="{{url('')}}/assets/public/assets/images/loggo.png" height="110" width="250" alt=""></a>
                             </div>
-                            
+
                             <h4 class="text-center mb-4">Sign in your account</h4>
                             <form class="create-account-form register-form verify-gcaptcha" method="POST"
                             action="{{ route('user.login') }}">
                             @csrf
 
 
-                       
+
                                 <div class="form-group mb-4">
                                     <label class="form-label" for="username">Username or Email</label>
                                     <input type="text" class="form-control" placeholder="Enter username" id="username"
@@ -112,7 +112,7 @@
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-block">Sign In</button>
                                 </div>
-                      
+
                         </form>
                             <div class="new-account mt-3">
                                 <p>Don't have an account? <a class="text-primary" href="/user/register">Sign up</a></p>

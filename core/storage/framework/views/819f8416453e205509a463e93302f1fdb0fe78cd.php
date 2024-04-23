@@ -86,4 +86,4 @@
     </div>
 </nav>
 <!-- navbar-wrapper end -->
-<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/aceboost/core/resources/views/admin/partials/topnav.blade.php ENDPATH**/ ?>
+<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/ACEBOOSTS/core/resources/views/admin/partials/topnav.blade.php ENDPATH**/ ?>

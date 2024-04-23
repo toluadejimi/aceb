@@ -14,7 +14,7 @@
                         <span class="menu-title"><?php echo app('translator')->get('Dashboard'); ?></span>
                     </a>
                 </li>
-                
+
                 <li class="sidebar-menu-item <?php echo e(menuActive('admin.category.index')); ?>">
                     <a href="<?php echo e(route('admin.category.index')); ?>" class="nav-link ">
                         <i class="menu-icon las la-bars"></i>
@@ -176,7 +176,7 @@
                 </li>
 
                 <li class="sidebar-menu-item sidebar-dropdown">
-                    
+
                     <div class="sidebar-submenu <?php echo e(menuActive('admin.gateway*', 2)); ?> ">
                         <ul>
 
@@ -374,11 +374,11 @@
                 </li>
 
                 <li class="sidebar-menu-item <?php echo e(menuActive('admin.extensions.index')); ?>">
-                    
+
                 </li>
 
                 <li class="sidebar-menu-item  <?php echo e(menuActive(['admin.language.manage', 'admin.language.key'])); ?>">
-                    
+
                 </li>
 
                 <li class="sidebar-menu-item <?php echo e(menuActive('admin.seo')); ?>">
@@ -427,7 +427,7 @@
                 <li class="sidebar__menu-header"><?php echo app('translator')->get('Frontend Manager'); ?></li>
 
                 <li class="sidebar-menu-item <?php echo e(menuActive('admin.frontend.templates')); ?>">
-                    
+
                 </li>
 
                 <li class="sidebar-menu-item <?php echo e(menuActive('admin.frontend.manage.*')); ?>">
@@ -508,11 +508,11 @@
                 </li>
 
                 <li class="sidebar-menu-item <?php echo e(menuActive('admin.setting.custom.css')); ?>">
-                    
+
                 </li>
 
                 <li class="sidebar-menu-item  <?php echo e(menuActive('admin.request.report')); ?>">
-                    
+
                 </li>
             </ul>
             <div class="text-center mb-3 text-uppercase">
@@ -533,4 +533,4 @@
         }
     </script>
 <?php $__env->stopPush(); ?>
-<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/aceboost/core/resources/views/admin/partials/sidenav.blade.php ENDPATH**/ ?>
+<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/ACEBOOSTS/core/resources/views/admin/partials/sidenav.blade.php ENDPATH**/ ?>

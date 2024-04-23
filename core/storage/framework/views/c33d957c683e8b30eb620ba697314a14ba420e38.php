@@ -40,7 +40,7 @@
     <script src="<?php echo e(asset('assets/viseradmin/js/vendor/select2.min.js')); ?>"></script>
     <script src="<?php echo e(asset('assets/viseradmin/js/app.js')); ?>"></script>
 
-    
+
     <script>
         "use strict";
         bkLib.onDomLoaded(function() {
@@ -66,4 +66,4 @@
 </body>
 
 </html>
-<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/aceboost/core/resources/views/admin/layouts/master.blade.php ENDPATH**/ ?>
+<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/ACEBOOSTS/core/resources/views/admin/layouts/master.blade.php ENDPATH**/ ?>
