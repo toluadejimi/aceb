@@ -70,65 +70,47 @@
                                                             ></span>
                                                         </div>
                                                     </th>
-                                                    <th
-                                                        class="hidden-xs hidden-sm service-description__th"
-                                                    >
-                                                        Description
-                                                    </th>
+
                                                 </tr>
                                                 </thead>
                                                 <tbody id="service-tbody">
-                                                <tr data-filter-table-category-id="14538">
-                                                    <td
-                                                        data-label="ID"
-                                                        data-filter-table-service-id="1401"
-                                                    >
-                                                        1401
-                                                    </td>
-                                                    <td
-                                                        data-label="Service"
-                                                        class="table-service"
-                                                        data-filter-table-service-name="true"
-                                                    >
-                                                        Instagram Likes - Cheapest
-                                                    </td>
-                                                    <td data-label="Rate per 1000">$0.0135</td>
-                                                    <td data-label="Min order">10</td>
-                                                    <td data-label="Max order">200 000</td>
-                                                    <td data-label="Average time" class="nowrap">
-                                                        81 hours 55 minutes
-                                                    </td>
-                                                    <td
-                                                        data-label=""
-                                                        class="services-list__description"
-                                                    >
-                                                        <div class="component_button_view">
-                                                            <div class="">
-                                                                <button
-                                                                    class="btn btn-actions btn-view-service-description"
-                                                                    data-toggle="modal"
-                                                                    data-content-id="#service-description-id-59-1401"
-                                                                    data-service-id="1401"
-                                                                    data-service-name="Instagram Likes - Cheapest"
-                                                                    data-min="10"
-                                                                    data-max="200 000"
-                                                                    data-target="#service-description-59"
-                                                                >
-                                                                    View
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            class="d-none"
-                                                            id="service-description-id-59-1401"
+
+
+                                                    <?php $__empty_1 = true; $__currentLoopData = $service; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+
+                                                        <tr data-filter-table-category-id="14538">
+
+                                                        <td
+                                                            data-label="ID"
+                                                            data-filter-table-service-id="1401"
                                                         >
-                                                            Current speed 5K+/H<br />Drop: 100%
-                                                            <br />Guarantee: no refill <br />Cancel
-                                                            enabled <br /><br />However please do not
-                                                            forget these are just estimations
-                                                        </div>
-                                                    </td>
+                                                            <?php echo e($data->api_service_id); ?>
+
+                                                        </td>
+
+                                                        <td
+                                                            data-label="Service"
+                                                            class="table-service"
+                                                            data-filter-table-service-name="true"
+                                                        >
+                                                            <?php echo e($data->name); ?>
+
+                                                        </td>
+
+                                                        <td data-label="Rate per 1000">NGN <?php echo e(number_format($data->price_per_k, 2)); ?></td>
+                                                        <td data-label="Min order"><?php echo e($data->min); ?></td>
+                                                        <td data-label="Max order"><?php echo e($data->max); ?></td>
+                                                        <td data-label="Average time" class="nowrap">
+                                                            Instant
+                                                        </td>
+
+
+
                                                 </tr>
+                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+                                                        No Service Found
+                                                    <?php endif; ?>
+
 
                                                 </tbody>
                                             </table>

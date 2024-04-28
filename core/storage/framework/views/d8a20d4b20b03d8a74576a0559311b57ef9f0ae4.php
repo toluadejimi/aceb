@@ -101,7 +101,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="component-footer__public-copyright">
-                                            <p class="text-center"><span style="text-align: CENTER">© Copyright. All Rights Reserved.</span>
+                                            <p class="text-center"><span style="text-align: CENTER">© AceBoosts 2024</span>
                                             </p>
                                         </div>
                                     </div>

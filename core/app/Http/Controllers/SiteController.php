@@ -8,6 +8,7 @@ use App\Models\Frontend;
 use App\Models\GeneralSetting;
 use App\Models\Language;
 use App\Models\Page;
+use App\Models\Service;
 use App\Models\Subscriber;
 use App\Models\SupportMessage;
 use App\Models\SupportTicket;
@@ -208,7 +209,8 @@ class SiteController extends Controller
     public function service()
     {
 
-        return view($this->activeTemplate . 'service');
+        $service = Service::latest()->paginate(50);
+        return view($this->activeTemplate . 'service', compact('service'));
 
 
     }

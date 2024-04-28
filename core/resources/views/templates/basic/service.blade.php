@@ -71,65 +71,45 @@
                                                             ></span>
                                                         </div>
                                                     </th>
-                                                    <th
-                                                        class="hidden-xs hidden-sm service-description__th"
-                                                    >
-                                                        Description
-                                                    </th>
+
                                                 </tr>
                                                 </thead>
                                                 <tbody id="service-tbody">
-                                                <tr data-filter-table-category-id="14538">
-                                                    <td
-                                                        data-label="ID"
-                                                        data-filter-table-service-id="1401"
-                                                    >
-                                                        1401
-                                                    </td>
-                                                    <td
-                                                        data-label="Service"
-                                                        class="table-service"
-                                                        data-filter-table-service-name="true"
-                                                    >
-                                                        Instagram Likes - Cheapest
-                                                    </td>
-                                                    <td data-label="Rate per 1000">$0.0135</td>
-                                                    <td data-label="Min order">10</td>
-                                                    <td data-label="Max order">200 000</td>
-                                                    <td data-label="Average time" class="nowrap">
-                                                        81 hours 55 minutes
-                                                    </td>
-                                                    <td
-                                                        data-label=""
-                                                        class="services-list__description"
-                                                    >
-                                                        <div class="component_button_view">
-                                                            <div class="">
-                                                                <button
-                                                                    class="btn btn-actions btn-view-service-description"
-                                                                    data-toggle="modal"
-                                                                    data-content-id="#service-description-id-59-1401"
-                                                                    data-service-id="1401"
-                                                                    data-service-name="Instagram Likes - Cheapest"
-                                                                    data-min="10"
-                                                                    data-max="200 000"
-                                                                    data-target="#service-description-59"
-                                                                >
-                                                                    View
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            class="d-none"
-                                                            id="service-description-id-59-1401"
+
+
+                                                    @forelse($service as $data)
+
+                                                        <tr data-filter-table-category-id="14538">
+
+                                                        <td
+                                                            data-label="ID"
+                                                            data-filter-table-service-id="1401"
                                                         >
-                                                            Current speed 5K+/H<br />Drop: 100%
-                                                            <br />Guarantee: no refill <br />Cancel
-                                                            enabled <br /><br />However please do not
-                                                            forget these are just estimations
-                                                        </div>
-                                                    </td>
+                                                            {{$data->api_service_id}}
+                                                        </td>
+
+                                                        <td
+                                                            data-label="Service"
+                                                            class="table-service"
+                                                            data-filter-table-service-name="true"
+                                                        >
+                                                            {{$data->name}}
+                                                        </td>
+
+                                                        <td data-label="Rate per 1000">NGN {{number_format($data->price_per_k, 2)}}</td>
+                                                        <td data-label="Min order">{{$data->min}}</td>
+                                                        <td data-label="Max order">{{$data->max}}</td>
+                                                        <td data-label="Average time" class="nowrap">
+                                                            Instant
+                                                        </td>
+
+
+
                                                 </tr>
+                                                    @empty
+                                                        No Service Found
+                                                    @endforelse
+
 
                                                 </tbody>
                                             </table>
