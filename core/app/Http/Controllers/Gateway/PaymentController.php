@@ -90,7 +90,7 @@ class PaymentController extends Controller
 
             Deposit::where('trx', $trx_id)->where('status', 0)->update(['status' => 3]);
 
-            return redirect('user/deposit/history')->with('error', 'Transaction Declined');
+            return redirect('user/deposit')->with('error', 'Transaction Declined');
         }
 
 
@@ -100,7 +100,7 @@ class PaymentController extends Controller
 
         if ($trxstatus == 1) {
 
-            return redirect('user/deposit/history')->with('error', 'Transaction already confirmed or not found');
+            return redirect('user/deposit')->with('error', 'Transaction already confirmed or not found');
         }
 
         $curl = curl_init();
@@ -164,13 +164,13 @@ class PaymentController extends Controller
 
 
 
-            return redirect('user/deposit/history')->with('message', "Wallet has been funded with $amount");
+            return redirect('user/deposit')->with('message', "Wallet has been funded with $amount");
         }
 
         // $message =  Auth::user()->name . "| is trying to fund  with | $request->trx_id  | " . number_format($request->amount, 2) . "\n\n IP ====> " . $request->ip();
         // send_notification($message);
 
-        return redirect('user/deposit/history')->with('error', 'Transaction already confirmed or not found');
+        return redirect('user/deposit')->with('error', 'Transaction already confirmed or not found');
     }
 
 
