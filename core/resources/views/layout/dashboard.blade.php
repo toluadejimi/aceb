@@ -13,6 +13,10 @@
         overflow: hidden;
         position: relative;
       }
+
+      #myModal{
+ z-index: 9999
+    }
     </style>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -368,9 +372,7 @@
   </script>
 
   <script>
-    #myModal{
- z-index: 9999
-}
+   
   </script>
 
   
