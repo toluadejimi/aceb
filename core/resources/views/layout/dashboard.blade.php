@@ -364,7 +364,16 @@
     ></script>
   
     
+    
   </script>
+
+  <script>
+    #myModal{
+ z-index: 9999
+}
+  </script>
+
+  
  
 
   <template id="auto-clicker-autofill-popup"></template>
