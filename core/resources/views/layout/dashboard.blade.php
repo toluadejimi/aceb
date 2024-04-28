@@ -149,27 +149,18 @@
                         >
                           <a
                             class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="user/deposit"
+                            href="/user/deposit"
                           >
                            Add Funds
                           </a>
                         </li>
+                        
                         <li
                           class="nav-item component-navbar-nav-item component-navbar-private-nav-item"
                         >
                           <a
                             class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="https://thelordofthepanels.com/addfunds"
-                          >
-                            Add funds
-                          </a>
-                        </li>
-                        <li
-                          class="nav-item component-navbar-nav-item component-navbar-private-nav-item"
-                        >
-                          <a
-                            class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="https://thelordofthepanels.com/api"
+                            href="/user/api/index"
                           >
                             API
                           </a>
@@ -179,7 +170,17 @@
                         >
                           <a
                             class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="https://thelordofthepanels.com/child-panel"
+                            href="#"
+                          >
+                            Affiliates
+                          </a>
+                        </li>
+                        <li
+                          class="nav-item component-navbar-nav-item component-navbar-private-nav-item"
+                        >
+                          <a
+                            class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
+                            href="#"
                           >
                             Child panel
                           </a>
@@ -189,9 +190,9 @@
                         >
                           <a
                             class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="https://thelordofthepanels.com/tickets"
+                            href="#"
                           >
-                            Tickets
+                           Tickets
                           </a>
                         </li>
                         <li
@@ -199,19 +200,9 @@
                         >
                           <a
                             class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="https://thelordofthepanels.com/massorder"
+                            href="#"
                           >
-                            Mass order
-                          </a>
-                        </li>
-                        <li
-                          class="nav-item component-navbar-nav-item component-navbar-private-nav-item"
-                        >
-                          <a
-                            class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="https://thelordofthepanels.com/updates"
-                          >
-                            Updates
+                            Mass Orders
                           </a>
                         </li>
                       </ul>
