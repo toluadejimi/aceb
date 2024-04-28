@@ -2,8 +2,8 @@
 @section('content')
 
     <style>
-        #myModal {
-            z-index: 9999
+        .modal-backdrop {
+            z-index: -1;
         }
     </style>
 
