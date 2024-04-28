@@ -38,8 +38,13 @@ class UserController extends Controller
         $widget['transactions ']= Transaction::where('user_id', auth()->id())->searchable(['trx'])->filter(['trx_type', 'remark'])->orderBy('id', 'desc')->paginate(getPaginate());
         $widget['orders']       = Order::where('user_id', $user->id)->paginate(getPaginate());
 
+        $widget['categories'] = Category::active()->whereHas('services', function ($services) {
+            return $services->active();
+        })->orderBy('name')->get();
 
-        $pending= Order::where('user_id', $user->id)->pending()->get();
+        $widget['whatsapp_link']  = GeneralSetting::where('id', 1)->first()->whatsapp_link;
+
+        $widget['pending']= Order::where('user_id', $user->id)->pending()->get();
 
         $whatsapp_link = GeneralSetting::where('id', 1)->first()->whatsapp_link;
         return view($this->activeTemplate . 'user.dashboard', $widget);
