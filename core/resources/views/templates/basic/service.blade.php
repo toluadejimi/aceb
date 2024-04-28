@@ -111,8 +111,16 @@
                                                     @endforelse
 
 
+
                                                 </tbody>
+
+
                                             </table>
+
+                                            <div class="d-flex justify-content-center my-5">
+                                                {{$service->links()}}
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
