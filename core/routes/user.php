@@ -24,7 +24,7 @@ Route::namespace('User\Auth')->name('user.')->group(function () {
     });
     Route::controller('ResetPasswordController')->group(function () {
         Route::post('password/reset', 'reset')->name('password.update');
-        Route::get('password/reset-now', 'showResetForm')->name('password.reset');
+        Route::get('reset-password', 'showResetForm')->name('password.reset');
     });
 });
 

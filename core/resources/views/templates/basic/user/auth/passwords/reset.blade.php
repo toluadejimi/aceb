@@ -1,141 +1,97 @@
-<!DOCTYPE html>
-<html lang="en" class="h-100">
-<head>
-    <!-- Title -->
-    <title>ACEBOOSTS | Register</title>
+@extends('layout.front')
+@section('content')
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="ACEBOOSTS">
-    <meta name="robots" content="">
-    <meta name="csrf-token" content="FefTGetU1RFbLEkeFzaTmhDS3ELvrQmLuUYPdybs">
-    <meta name="keywords"
-          content="bootstrap, courses, education admin template, educational, instructors, learning, learning admin, learning admin theme, learning application, lessons, lms admin template, lms rails, quizzes ui, school admin">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Some description for the page">
-    <meta property="og:title" content="Social Media Boost">
-    <meta property="og:description" content="ACEBOOSTS | Register">
-    <meta name="format-detection" content="telephone=no">
-
-    <!-- Mobile Specific -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicons Icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{url('')}}/assets/dash/images/favicon.png">
-
-    <link
-        href="{{url('')}}/assets/dash/vendor/bootstrap-select/dist/{{url('')}}/assets/dash/css/bootstrap-select.min.css"
-        rel="stylesheet">
-    <link href="{{url('')}}/assets/dash/css/style.css" rel="stylesheet">
-
-</head>
-
-
-<body class="vh-100" style="background-image:url('{{url('')}}/assets/dash/images/bg.png'); background-position:center;">
-<div class="h-100">
-    <div class="container h-100">
+    <div class="wrapper-content">
+        <div class="wrapper-content__header">
+        </div>
+        <div class="wrapper-content__body">
+            <!-- Main variables *content* -->
+            <div id="block_39">
+                <div class="block-bg"></div>
+                <div class="container-fluid">
+                    <div class="reset-password-form">
+                        <div class="row reset-password-form__alignment">
 
 
 
+                            <div class="col-lg-6">
 
 
-        <div class="row justify-content-center h-100 align-items-center">
-            <div class="col-md-6">
-                <div class="authincation-content">
-                    <div class="row no-gutters">
-                        <div class="col-xl-12 p-3">
-                            <div class="text-center mb-3">
-                                <a href="/"><img src="{{url('')}}/assets/home/img/logo.svg"
-                                                 alt=""></a>
-                            </div>
+                                @if ($errors->any())
+                                    <div class="alert alert-danger mb-3">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                                @if (session()->has('message'))
+                                    <div class="alert alert-success mb-3">
+                                        {{ session()->get('message') }}
+                                    </div>
+                                @endif
+                                @if (session()->has('error'))
+                                    <div class="alert alert-danger mb-3">
+                                        {{ session()->get('error') }}
+                                    </div>
+                                @endif
 
-                            @if ($errors->any())
-                                <div class="alert alert-danger mb-3">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
-                            @if (session()->has('message'))
-                                <div class="alert alert-success mb-3">
-                                    {{ session()->get('message') }}
-                                </div>
-                            @endif
-                            @if (session()->has('error'))
-                                <div class="alert alert-danger mb-3">
-                                    {{ session()->get('error') }}
-                                </div>
-                            @endif
 
-                            <div class="card-body p-3">
 
-                                <div class="col-md-12">
-                                    <div class="common-form-style bg-one">
-                                        <div class="mb-4">
-                                            <h4>@lang('Your account is verified successfully. Now you can change your password. Please enter a strong password and don\'t share it with anyone.')</h4>
-                                        </div>
+                                <div class="component_card">
+                                    <div class="card2">
                                         <form method="POST" action="{{ route('user.password.update') }}">
                                             @csrf
-                                            <input type="hidden" name="email" value="{{ $email }}">
-                                            <div class="form-group mb-3">
-                                                <label class="form-label">@lang('Password')</label>
-                                                <input type="password" class="form-control form--control" name="password"
-                                                       placeholder="@lang('Password')" required>
-                                                @if ($general->secure_password)
-                                                    <div class="input-popup">
-                                                        <p class="error lower">@lang('1 small letter minimum')</p>
-                                                        <p class="error capital">@lang('1 capital letter minimum')</p>
-                                                        <p class="error number">@lang('1 number minimum')</p>
-                                                        <p class="error special">@lang('1 special character minimum')</p>
-                                                        <p class="error minimum">@lang('6 character password')</p>
+                                            <div class="component_form_group">
+                                                <div class="">
+
+                                                        <input type="text" class="form-control" id="email"
+                                                               hidden value="{{$email ?? "Email"}}" name="email">
+
+
+                                                    <input type="text" class="form-control" id="email"
+                                                           hidden value="{{$code ?? "Email"}}" name="code">
+
+                                                    <div class="component_form_group">
+                                                        <div class="">
+                                                            <div class="form-group">
+                                                                <label for="password" class="control-label">Password</label>
+                                                                <input type="password" class="form-control" id="password"
+                                                                       value="" name="password" required>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                @endif
-                                            </div>
-                                            <div class="form-group mb-3">
-                                                <label class="form-label">@lang('Confirm Password')</label>
-                                                <input type="password" class="form-control form--control" placeholder="@lang('Confirm Password')"
-                                                       name="password_confirmation" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <button type="submit" class="btn btn-primary w-100"> @lang('Submit')</button>
+                                                    <div class="component_form_group">
+                                                        <div class="">
+                                                            <div class="form-group">
+                                                                <label for="password_again" class="control-label">Confirm
+                                                                    password</label>
+                                                                <input type="password" class="form-control"
+                                                                       id="password_again" value=""
+                                                                       name="password_confirmation" required">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <input type="hidden" name="_csrf"
+                                                       value="Id7oGaeO1_8GTh_QTHvThBeI7zoO-7cTa_OJ1iJgX-V3m49Q_sKTx0wZSLk8EJ-ydLG_bEepzX0fgMewVQgIlA==">
+                                                <div class="component_button_submit">
+                                                    <div class="mt-3">
+                                                        <button type="submit" class="btn btn-block btn-big-primary">
+                                                            Reset Password
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</div>
-
-
-<!-- Required vendors -->
-<script src="{{url('')}}/assets/dash/vendor/global/global.min.js" type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/vendor/bootstrap-select/dist/{{url('')}}/assets/dash/js/bootstrap-select.min.js"
-        type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/js/custom.min.js" type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/js/deznav-init.js" type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/js/demo.js" type="text/javascript"></script>
-
-
-</body>
-</html>
-
-
-
-
-
-@if ($general->secure_password)
-    @push('script-lib')
-        <script src="{{ asset('assets/global/js/secure_password.js') }}"></script>
-    @endpush
-@endif
-
-
+@endsection

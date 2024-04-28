@@ -1,53 +1,31 @@
-<!DOCTYPE html>
-<html lang="en" class="h-100">
-<head>
-    <!-- Title -->
-    <title>ACEBOOSTS | Register</title>
+@extends('layout.front')
+@section('content')
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="ACEBOOSTS">
-    <meta name="robots" content="">
-    <meta name="csrf-token" content="FefTGetU1RFbLEkeFzaTmhDS3ELvrQmLuUYPdybs">
-    <meta name="keywords"
-          content="bootstrap, courses, education admin template, educational, instructors, learning, learning admin, learning admin theme, learning application, lessons, lms admin template, lms rails, quizzes ui, school admin">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Some description for the page">
-    <meta property="og:title" content="Social Media Boost">
-    <meta property="og:description" content="ACEBOOSTS | Register">
-    <meta name="format-detection" content="telephone=no">
-
-    <!-- Mobile Specific -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicons Icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{url('')}}/assets/dash/images/favicon.png">
-
-    <link
-        href="{{url('')}}/assets/dash/vendor/bootstrap-select/dist/{{url('')}}/assets/dash/css/bootstrap-select.min.css"
-        rel="stylesheet">
-    <link href="{{url('')}}/assets/dash/css/style.css" rel="stylesheet">
-
-</head>
-
-
-<body class="vh-100" style="background-image:url('{{url('')}}/assets/dash/images/bg.png'); background-position:center;">
-<div class="h-100">
-    <div class="container h-100">
+    <div class="wrapper-content">
+        <div class="wrapper-content__header">
+        </div>
+        <div class="wrapper-content__body">
+            <!-- Main variables *content* -->
+            <div id="block_39">
+                <div class="block-bg"></div>
+                <div class="container-fluid">
+                    <div class="reset-password-form">
+                        <div class="row reset-password-form__alignment">
 
 
 
+                            <div class="col-lg-6">
 
 
-        <div class="row justify-content-center h-100 align-items-center">
-            <div class="col-md-6">
-                <div class="authincation-content">
-                    <div class="row no-gutters">
-                        <div class="col-xl-12 p-3">
-                                <div class="text-center mb-3">
-                                    <a href="/"><img src="{{url('')}}/assets/home/img/logo.svg"
-                                                     alt=""></a>
+                                <div class="d-flex justify-content-center mt-4">
+                                    <h1> FORGOT PASSWORD?</h1>
                                 </div>
+                                <div class="d-flex justify-content-center mt-2 mb-5">
+                                    <p style="font-size: 17px; margin-top: 10px">&nbsp;Reset your password by entering your registered email address&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                </div>
+
+
 
                                 @if ($errors->any())
                                     <div class="alert alert-danger mb-3">
@@ -69,53 +47,43 @@
                                     </div>
                                 @endif
 
-                            <div class="card-body p-3">
 
-                                <h4>
-                                    @lang('To recover your account please provide your email or username to find your account.')
-                                </h4>
-                                <form method="POST" action="{{ route('user.password.email') }}">
-                                    @csrf
-                                    <div class="form-group">
-                                        <label class="form-label">@lang('Email or Username')</label>
-                                        <input type="text" class="form-control form--control" name="value"
-                                               value="{{ old('value') }}" required autofocus="off" placeholder="@lang('Username or Email')">
+
+
+
+
+
+                                <div class="component_card">
+                                    <div class="card2">
+                                        <form method="POST" action="{{ route('user.password.email') }}">
+                                            @csrf
+                                            <div class="component_form_group">
+                                                <div class="">
+                                                    <div class="form-group">
+                                                        <label for="email" class="control-label">Email</label>
+                                                        <input type="email" class="form-control" id="email"
+                                                               name="email">
+                                                    </div>
+                                                    <div class="g-recaptcha form-group"
+                                                         data-sitekey="6LeF5rUaAAAAADYvG5QRSND25xaKUr_ba9EQ7PbY"></div>
+                                                </div>
+                                                <input type="hidden" name="_csrf"
+                                                       value="Id7oGaeO1_8GTh_QTHvThBeI7zoO-7cTa_OJ1iJgX-V3m49Q_sKTx0wZSLk8EJ-ydLG_bEepzX0fgMewVQgIlA==">
+                                                <div class="component_button_submit">
+                                                    <div class="">
+                                                        <button type="submit" class="btn btn-block btn-big-primary">
+                                                            Send
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
-
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary w-100 mt-3">@lang('Submit')</button>
-                                    </div>
-                                </form>
-
-
+                                </div>
                             </div>
-
-
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-
-<!-- Required vendors -->
-<script src="{{url('')}}/assets/dash/vendor/global/global.min.js" type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/vendor/bootstrap-select/dist/{{url('')}}/assets/dash/js/bootstrap-select.min.js"
-        type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/js/custom.min.js" type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/js/deznav-init.js" type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/js/demo.js" type="text/javascript"></script>
-
-
-</body>
-</html>
-
-
-
-
-
-
-
+@endsection

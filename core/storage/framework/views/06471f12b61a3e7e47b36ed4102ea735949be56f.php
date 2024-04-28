@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <!-- Title -->
-    <title>Aceboost | Best Smm</title>
+    <title>ACEBOOSTS | Best Smm</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="AceBoost">
+    <meta name="author" content="ACEBOOSTS">
     <meta name="robots" content="">
     <meta name="csrf-token" content="FefTGetU1RFbLEkeFzaTmhDS3ELvrQmLuUYPdybs">
     <meta name="keywords"
@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Some description for the page">
     <meta property="og:title" content="Social Media Boost">
-    <meta property="og:description" content="Aceboost | Best Smm">
+    <meta property="og:description" content="ACEBOOSTS | Best Smm">
     <meta name="format-detection" content="telephone=no">
 
     <!-- Mobile Specific -->
@@ -325,7 +325,7 @@ Sidebar end
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="#" class="float" target="_blank">
+    <a href="https://chat.whatsapp.com/E6cxlJmfLrK6Q7oly0hdKc" class="float" target="_blank">
         <i class="fa fa-comment my-float"></i>
     </a>
 
@@ -334,7 +334,7 @@ Footer start
 ***********************************-->
     <div class="footer mt-3">
         <div class="copyright mt-3">
-            <p>Copyright © Developed by <a href="https://AceBoost.com/" target="_blank">AceBoost</a> 2023</p>
+            <p>Copyright © Developed by <a href="https://ACEBOOSTS.com/" target="_blank">ACEBOOSTS</a> 2023</p>
         </div>
     </div>                <!--**********************************
             Footer end
@@ -364,7 +364,6 @@ Footer start
 <script src="<?php echo e(url('')); ?>/assets/dash/js/custom.min.js" type="text/javascript"></script>
 <script src="<?php echo e(url('')); ?>/assets/dash/js/deznav-init.js" type="text/javascript"></script>
 <script src="<?php echo e(url('')); ?>/assets/dash/js/demo.js" type="text/javascript"></script>
-<script src="<?php echo e(url('')); ?>/assets/dash/js/styleSwitcher.js" type="text/javascript"></script>
 
 
 </body>

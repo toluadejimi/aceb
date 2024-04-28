@@ -1,53 +1,30 @@
-<!DOCTYPE html>
-<html lang="en" class="h-100">
-<head>
-    <!-- Title -->
-    <title>Aceboost | Register</title>
+<?php $__env->startSection('content'); ?>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="AceBoost">
-    <meta name="robots" content="">
-    <meta name="csrf-token" content="FefTGetU1RFbLEkeFzaTmhDS3ELvrQmLuUYPdybs">
-    <meta name="keywords"
-          content="bootstrap, courses, education admin template, educational, instructors, learning, learning admin, learning admin theme, learning application, lessons, lms admin template, lms rails, quizzes ui, school admin">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Some description for the page">
-    <meta property="og:title" content="Social Media Boost">
-    <meta property="og:description" content="Aceboost | Register">
-    <meta name="format-detection" content="telephone=no">
-
-    <!-- Mobile Specific -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicons Icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo e(url('')); ?>/assets/dash/images/favicon.png">
-
-    <link
-        href="<?php echo e(url('')); ?>/assets/dash/vendor/bootstrap-select/dist/<?php echo e(url('')); ?>/assets/dash/css/bootstrap-select.min.css"
-        rel="stylesheet">
-    <link href="<?php echo e(url('')); ?>/assets/dash/css/style.css" rel="stylesheet">
-
-</head>
-
-
-<body class="vh-100" style="background-image:url('<?php echo e(url('')); ?>/assets/dash/images/bg.png'); background-position:center;">
-<div class="h-100">
-    <div class="container h-100">
+    <div class="wrapper-content">
+        <div class="wrapper-content__header">
+        </div>
+        <div class="wrapper-content__body">
+            <!-- Main variables *content* -->
+            <div id="block_39">
+                <div class="block-bg"></div>
+                <div class="container-fluid">
+                    <div class="reset-password-form">
+                        <div class="row reset-password-form__alignment">
 
 
 
+                            <div class="col-lg-6">
 
 
-        <div class="row justify-content-center h-100 align-items-center">
-            <div class="col-md-6">
-                <div class="authincation-content">
-                    <div class="row no-gutters">
-                        <div class="col-xl-12 p-3">
-                                <div class="text-center mb-3">
-                                    <a href="/"><img src="<?php echo e(url('')); ?>/assets/home/img/logo.svg"
-                                                     alt=""></a>
+                                <div class="d-flex justify-content-center mt-4">
+                                    <h1> Sign up to get started</h1>
                                 </div>
+                                <div class="d-flex justify-content-center mt-2 mb-5">
+                                    <p style="font-size: 17px; margin-top: 10px">&nbsp;Choose a username and quickly set up your account with your email&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                </div>
+
+
 
                                 <?php if($errors->any()): ?>
                                     <div class="alert alert-danger mb-3">
@@ -71,54 +48,45 @@
                                     </div>
                                 <?php endif; ?>
 
-                            <div class="card-body p-3">
 
-                                <h4>
-                                    <?php echo app('translator')->get('To recover your account please provide your email or username to find your account.'); ?>
-                                </h4>
-                                <form method="POST" action="<?php echo e(route('user.password.email')); ?>">
-                                    <?php echo csrf_field(); ?>
-                                    <div class="form-group">
-                                        <label class="form-label"><?php echo app('translator')->get('Email or Username'); ?></label>
-                                        <input type="text" class="form-control form--control" name="value"
-                                               value="<?php echo e(old('value')); ?>" required autofocus="off" placeholder="<?php echo app('translator')->get('Username or Email'); ?>">
+
+
+
+
+
+                                <div class="component_card">
+                                    <div class="card2">
+                                        <form method="POST" action="<?php echo e(route('user.password.email')); ?>">
+                                            <?php echo csrf_field(); ?>
+                                            <div class="component_form_group">
+                                                <div class="">
+                                                    <div class="form-group">
+                                                        <label for="email" class="control-label">Email</label>
+                                                        <input type="email" class="form-control" id="email"
+                                                               name="email">
+                                                    </div>
+                                                    <div class="g-recaptcha form-group"
+                                                         data-sitekey="6LeF5rUaAAAAADYvG5QRSND25xaKUr_ba9EQ7PbY"></div>
+                                                </div>
+                                                <input type="hidden" name="_csrf"
+                                                       value="Id7oGaeO1_8GTh_QTHvThBeI7zoO-7cTa_OJ1iJgX-V3m49Q_sKTx0wZSLk8EJ-ydLG_bEepzX0fgMewVQgIlA==">
+                                                <div class="component_button_submit">
+                                                    <div class="">
+                                                        <button type="submit" class="btn btn-block btn-big-primary">
+                                                            Send
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
-
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary w-100 mt-3"><?php echo app('translator')->get('Submit'); ?></button>
-                                    </div>
-                                </form>
-
-
+                                </div>
                             </div>
-
-
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+<?php $__env->stopSection(); ?>
 
-
-<!-- Required vendors -->
-<script src="<?php echo e(url('')); ?>/assets/dash/vendor/global/global.min.js" type="text/javascript"></script>
-<script src="<?php echo e(url('')); ?>/assets/dash/vendor/bootstrap-select/dist/<?php echo e(url('')); ?>/assets/dash/js/bootstrap-select.min.js"
-        type="text/javascript"></script>
-<script src="<?php echo e(url('')); ?>/assets/dash/js/custom.min.js" type="text/javascript"></script>
-<script src="<?php echo e(url('')); ?>/assets/dash/js/deznav-init.js" type="text/javascript"></script>
-<script src="<?php echo e(url('')); ?>/assets/dash/js/demo.js" type="text/javascript"></script>
-
-
-</body>
-</html>
-
-
-
-
-
-
-
-<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/aceboost/core/resources/views/templates/basic/user/auth/passwords/email.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layout.front', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/aceboost/core/resources/views/templates/basic/user/auth/passwords/email.blade.php ENDPATH**/ ?>

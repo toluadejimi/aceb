@@ -7,6 +7,7 @@ use App\Models\PasswordReset;
 use App\Models\User;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ForgotPasswordController extends Controller
 {
@@ -38,33 +39,49 @@ class ForgotPasswordController extends Controller
     public function sendResetCodeEmail(Request $request)
     {
         $request->validate([
-            'value' => 'required',
+            'email' => 'required',
         ]);
-        $fieldType = $this->findFieldType();
-        $user      = User::where($fieldType, $request->value)->first();
+
+        $user = User::where('email', $request->email)->first();
 
         if (!$user) {
-            $notify =  "Couldn\'t find any account with this information";
+            $notify =  "Couldn't find any account with this information";
             return back()->with('error',  $notify);
         }
 
         $code = random_int(00000, 99999);
         $user->update(['ver_code' => $code]);
 
+        $url = url('')."/user/reset-password?code=$code&email=$request->email";
+        $data = array(
+            'fromsender' => 'noreply@aceboosts.com', 'ACEBOOST',
+            'subject' => "Reset Password",
+            'toreceiver' => $request->email,
+            'first_name' => $user->username,
+            'link' => $url,
+        );
+
+        Mail::send('emails.pinlink', ["data1" => $data], function ($message) use ($data) {
+            $message->from($data['fromsender']);
+            $message->to($data['toreceiver']);
+            $message->subject($data['subject']);
+        });
+
+
         $userIpInfo      = getIpInfo();
         $userBrowserInfo = osBrowser();
         notify($user, 'PASS_RESET_CODE', [
-            'code'             => $code,
+            'code'             => $url,
             'operating_system' => @$userBrowserInfo['os_platform'],
             'browser'          => @$userBrowserInfo['browser'],
             'ip'               => @$userIpInfo['ip'],
             'time'             => @$userIpInfo['time'],
         ], ['email']);
 
+
         $email = $user->email;
-        session()->put('pass_res_mail', $email);
-        $notify =  "Password reset email sent successfullyn";
-        return to_route('user.password.code.verify')->with('message',  $notify);
+        $notify =  "Password reset email sent successfully";
+        return back()->with('message',  $notify);
     }
 
     public function findFieldType()

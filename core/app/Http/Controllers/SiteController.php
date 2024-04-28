@@ -204,4 +204,12 @@ class SiteController extends Controller
         $maintenance = Frontend::where('data_keys', 'maintenance.data')->first();
         return view($this->activeTemplate . 'maintenance', compact('pageTitle', 'maintenance'));
     }
+
+    public function service()
+    {
+
+        return view($this->activeTemplate . 'service');
+
+
+    }
 }

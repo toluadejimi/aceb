@@ -35,10 +35,10 @@ class ResetPasswordController extends Controller
     public function showResetForm(request $request)
     {
 
-        dd($request->email);
-
         $email = $request->email;
-        return view($this->activeTemplate . 'user.auth.passwords.reset', compact('email'));
+        $code = $request->code;
+
+        return view($this->activeTemplate . 'user.auth.passwords.reset', compact('email', 'code'));
 
 
 
@@ -47,25 +47,24 @@ class ResetPasswordController extends Controller
     public function reset(Request $request)
     {
 
+
+
         $request->validate($this->rules(), $this->validationErrorMessages());
-        $user = User::where('email', $request->email)->first();
+
+
+
+        $user = User::where('email', $request->email)->where('ver_code', $request->code)->first() ?? null;
+
+        if(!$user){
+            return back()->with('error', "Email or code incorrect");
+        }
+
         $user->password = Hash::make($request->password);
         $user->save();
 
 
-
-        $userIpInfo = getIpInfo();
-        $userBrowser = osBrowser();
-        notify($user, 'PASS_RESET_DONE', [
-            'operating_system' => @$userBrowser['os_platform'],
-            'browser' => @$userBrowser['browser'],
-            'ip' => @$userIpInfo['ip'],
-            'time' => @$userIpInfo['time']
-        ], ['email']);
-
-
-        $notify[] = ['success', 'Password changed successfully'];
-        return to_route('user.login')->withNotify($notify);
+        $notify = "Password changed successfully";
+        return to_route('user.login')->with('message', $notify);
     }
 
 

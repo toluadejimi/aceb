@@ -1,55 +1,28 @@
-<!DOCTYPE html>
-<html lang="en" class="h-100">
-<head>
-    <!-- Title -->
-    <title>ACEBOOSTS | Register</title>
+@extends('layout.front')
+@section('content')
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="ACEBOOSTS">
-    <meta name="robots" content="">
-    <meta name="csrf-token" content="FefTGetU1RFbLEkeFzaTmhDS3ELvrQmLuUYPdybs">
-    <meta name="keywords"
-          content="bootstrap, courses, education admin template, educational, instructors, learning, learning admin, learning admin theme, learning application, lessons, lms admin template, lms rails, quizzes ui, school admin">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Some description for the page">
-    <meta property="og:title" content="Social Media Boost">
-    <meta property="og:description" content="ACEBOOSTS | Register">
-    <meta name="format-detection" content="telephone=no">
-
-    <!-- Mobile Specific -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicons Icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{url('')}}/assets/dash/images/favicon.png">
-
-    <link
-        href="{{url('')}}/assets/dash/vendor/bootstrap-select/dist/{{url('')}}/assets/dash/css/bootstrap-select.min.css"
-        rel="stylesheet">
-    <link href="{{url('')}}/assets/dash/css/style.css" rel="stylesheet">
-
-</head>
-
-
-<body class="vh-100" style="background-image:url('{{url('')}}/assets/dash/images/bg.png'); background-position:center;">
-<div class="h-100">
-    <div class="container h-100">
+    <div class="wrapper-content">
+        <div class="wrapper-content__header">
+        </div>
+        <div class="wrapper-content__body">
+            <!-- Main variables *content* -->
+            <div id="block_38">
+                <div class="block-bg"></div>
+                <div class="container">
+                    <div class="sign-in">
+                        <div class="row sign-up-center-alignment">
+                            <div class="col-lg-8">
 
 
 
-
-
-        <div class="row justify-content-center h-100 align-items-center">
-            <div class="col-md-6">
-                <div class="authincation-content">
-                    <div class="row no-gutters">
-                        <div class="col-xl-12">
-                            <div class="auth-form">
-                                <div class="text-center mb-3">
-                                    <a href="/"><img src="{{url('')}}/assets/home/img/logo.svg"
-                                                              alt=""></a>
+                                <div class="d-flex justify-content-center mt-4">
+                                    <h1> Sign up to get started</h1>
                                 </div>
-                                <h4 class="text-center mb-4">Sign up your account</h4>
+                                <div class="d-flex justify-content-center mt-2 mb-5">
+                                    <p style="font-size: 17px; margin-top: 10px">&nbsp;Choose a username and quickly set up your account with your email&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                </div>
+
 
                                 @if ($errors->any())
                                     <div class="alert alert-danger mb-3">
@@ -71,70 +44,98 @@
                                     </div>
                                 @endif
 
-                                <form action="{{ route('user.register') }}" method="POST">
-                                    @csrf
-
-                                    <div class="form-group mb-4">
-                                        <label class="form-label" for="username">Username</label>
-                                        <input type="text" class="form-control" name="username"
-                                               value="{{ old('username') }}" required
-                                               placeholder="@lang('Enter Username')">
-                                        <small class="text--danger usernameExist"></small>
-                                    </div>
 
 
-                                    <div class="mb-sm-4 mb-3 position-relative">
-                                        <label class="form-label" for="email-address">Email Address</label>
-                                        <input type="email" class="form-control" placeholder="@lang('Your Email')"
-                                               name="email" value="{{ old('email') }}" required>
-                                    </div>
 
 
-                                    <div class="form-group mb-4">
-                                        <label class="form-label" for="password">Password</label>
-                                        <input type="password" class="form-control" name="password"
-                                               placeholder="@lang('Password')" required>
-                                        @if ($general->secure_password)
-                                            <div class="input-popup">
-                                                <p class="error lower">@lang('1 small letter minimum')</p>
-                                                <p class="error capital">@lang('1 capital letter minimum')</p>
-                                                <p class="error number">@lang('1 number minimum')</p>
-                                                <p class="error special">@lang('1 special character minimum')</p>
-                                                <p class="error minimum">@lang('6 character password')</p>
+
+                                <div class="component_card">
+                                    <div class="card2">
+                                        <form action="{{ route('user.register') }}" method="POST">
+                                            @csrf
+                                            <div>
+                                                <div class="component_form_group">
+                                                    <div class="">
+                                                        <div class="form-group">
+                                                            <label for="login" class="control-label">Username</label>
+                                                            <input type="text" class="form-control" id="login"
+                                                                   name="username"
+                                                                   value="{{ old('username') }}">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="component_form_group">
+                                                    <div class="">
+                                                        <div class="form-group">
+                                                            <label for="email" class="control-label">Email</label>
+                                                            <input type="email" class="form-control" name="email"
+                                                                   value="{{ old('email') }}" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="component_form_group">
+                                                    <div class="">
+                                                        <div class="form-group">
+                                                            <label for="password" class="control-label">Password</label>
+                                                            <input type="password" class="form-control" id="password"
+                                                                   value="" name="password" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="component_form_group">
+                                                    <div class="">
+                                                        <div class="form-group">
+                                                            <label for="password_again" class="control-label">Confirm
+                                                                password</label>
+                                                            <input type="password" class="form-control"
+                                                                   id="password_again" value=""
+                                                                   name="password_confirmation" required">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                @if ($general->agree)
+                                                <div class="">
+                                                    <div class="signup-checkbox">
+                                                        <div class="component_checkbox">
+                                                            <div class="">
+                                                                <div class="form-group__checkbox">
+                                                                    <label class="form-group__checkbox-label">
+                                                                        <input type="checkbox"
+                                                                               name="agree"
+                                                                               value="1" id="terms">
+                                                                        <span class="checkmark"></span>
+                                                                    </label>
+                                                                    <label class="form-group__label-title" for="terms">I
+                                                                        have read and agreed with<a href="#"
+                                                                                                    target="_blank"
+                                                                                                    class="sign-up-center-terms-link">Terms
+                                                                            of Service</a></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @endif
                                             </div>
-                                        @endif
+
+                                            <input type="hidden" name="_csrf"
+                                                   value="4SdWQpDVxxlJXfU2dwC_0ywAb2XNxCtfXbK-1HU_WQy3YjELyZmDIQMKol8Ha_PlTzk_M4SWUTEpwfCyAlcOfQ==">
+                                            <div class="component_button_submit">
+                                                <div class="form-group">
+                                                    <div class="">
+                                                        <button type="submit" class="btn btn-block btn-big-primary">Sign
+                                                            up
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-center">Already have an account?<a href="/user/login"
+                                                                                                class="sign-up-center-signin-link">Sign
+                                                    in</a></div>
+                                        </form>
                                     </div>
-
-                                    <div class="form-group mb-4">
-                                        <label class="form-label" for="password">Confirm Password</label>
-                                        <input type="password" class="form-control form--control"
-                                               name="password_confirmation" required
-                                               placeholder="@lang('Confirm Password')">
-                                    </div>
-
-
-                                    @if ($general->agree)
-                                        <div class="form-group form-checkbox my-3 text-center">
-                                            <input type="checkbox" id="agree" @checked(old('agree')) name="agree"
-                                                   required>
-                                            <label for="agree">@lang('I agree with')</label>
-                                            <span class="text--base">
-                                            <a href="{{url('')}}/policy/privacy-and-policy/93">Policy</a>
-                                        </span>
-                                        </div>
-                                    @endif
-
-
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-primary btn-block">Register</button>
-                                    </div>
-
-                                </form>
-
-
-                                <div class="new-account mt-3 d-flex justify-content-center">
-                                    <p>Already have an account? <a class="text-primary" href="/user/login">Sign
-                                            in</a></p>
                                 </div>
                             </div>
                         </div>
@@ -142,20 +143,4 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-
-<!-- Required vendors -->
-<script src="{{url('')}}/assets/dash/vendor/global/global.min.js" type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/vendor/bootstrap-select/dist/{{url('')}}/assets/dash/js/bootstrap-select.min.js"
-        type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/js/custom.min.js" type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/js/deznav-init.js" type="text/javascript"></script>
-<script src="{{url('')}}/assets/dash/js/demo.js" type="text/javascript"></script>
-
-
-</body>
-</html>
-
-
+@endsection

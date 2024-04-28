@@ -26,7 +26,7 @@ Route::controller('TicketController')->prefix('ticket')->name('ticket.')->group(
 Route::get('app/deposit/confirm/{hash}', 'Gateway\PaymentController@appDepositConfirm')->name('deposit.app.confirm');
 
 Route::controller('SiteController')->group(function () {
-    Route::get('/contact', 'contact')->name('contact');
+    Route::get('/service', 'service')->name('service');
     Route::post('/contact', 'contactSubmit');
     Route::get('/change/{lang?}', 'changeLanguage')->name('lang');
 
@@ -46,4 +46,5 @@ Route::controller('SiteController')->group(function () {
 
     Route::get('/{slug}', 'pages')->name('pages');
     Route::get('/', 'index')->name('home');
+
 });
