@@ -462,7 +462,7 @@ function resolve_complete($order_id)
 
 function trx_id()
 {
-    $trx_id = "PLA-" . random_int(000, 999) . date('ymdhis');
+    $trx_id = "ACB-" . random_int(000, 999) . date('ymdhis');
     return $trx_id;
 }
 

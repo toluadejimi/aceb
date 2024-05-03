@@ -1,11 +1,14 @@
 <?php
 
+use App\Http\Controllers\Gateway\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/clear', function () {
     \Illuminate\Support\Facades\Artisan::call('optimize:clear');
 });
 
+
+Route::get('makemanual', [PaymentController::class, 'makemanual'])->name('makemanual');
 
 
 

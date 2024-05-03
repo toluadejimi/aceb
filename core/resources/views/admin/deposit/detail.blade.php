@@ -23,7 +23,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             @lang('Method')
-                            <span class="fw-bold">{{ __(@$deposit->gateway->name) }}</span>
+                            <a href="{{$deposit->url}}" }}>View Recepit</a>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             @lang('Amount')

@@ -87,6 +87,18 @@
                             <div class="card-body">
 
                                 <div class="form-group">
+                                    <label class="form-label">@lang('Payment Method')</label>
+                                    <div class="input-group">
+                                        <select type="number" step="any" name="gateway" class="form-control form--control" required >
+                                            <option value="">Select payment method</option>
+                                            <option value="1">Instant Payment</option>
+                                            <option value="2">Manual Payment</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     <label class="form-label">@lang('Amount')</label>
                                     <div class="input-group">
                                         <input type="number" step="any" name="amount"
@@ -124,7 +136,6 @@
 
 
                                                 <th class="">@lang('Amount')</th>
-                                                <th class="">@lang('Status')</th>
                                                 <th class="">@lang('Action')</th>
 
                                             </tr>
@@ -197,7 +208,7 @@
 
 
 
-                                                    {{-- 
+                                                    {{--
 
                                             <td>
                                                 <span class="fw-bold"> <span
@@ -218,20 +229,20 @@
 
                                                     </td>
 
-                                                    <td>
-                                                        @if ($deposit->status == 0)
-                                                            <span class="badge badge-danger text-white">Pending</span>
-                                                        @elseif($deposit->status == 1)
-                                                            <span class="badge badge-danger text-white">Completed</span>
-                                                        @elseif($deposit->status == 2)
-                                                            <span class="badge badge-warning text-white">Pending</span>
-                                                        @elseif($deposit->status == 5)
-                                                            <span class="badge badge-danger text-white">Reslove
-                                                                Completed</span>
-                                                        @else()
-                                                            <span class="badge badge-primary text-white">Refunded</span>
-                                                        @endif
-                                                    </td>
+{{--                                                    <td>--}}
+{{--                                                        @if ($deposit->status == 0)--}}
+{{--                                                            <span class="badge badge-danger text-white">Pending</span>--}}
+{{--                                                        @elseif($deposit->status == 1)--}}
+{{--                                                            <span class="badge badge-danger text-white">Completed</span>--}}
+{{--                                                        @elseif($deposit->status == 2)--}}
+{{--                                                            <span class="badge badge-warning text-white">Pending</span>--}}
+{{--                                                        @elseif($deposit->status == 5)--}}
+{{--                                                            <span class="badge badge-danger text-white">Reslove--}}
+{{--                                                                Completed</span>--}}
+{{--                                                        @else()--}}
+{{--                                                            <span class="badge badge-primary text-white">Refunded</span>--}}
+{{--                                                        @endif--}}
+{{--                                                    </td>--}}
 
 
 
