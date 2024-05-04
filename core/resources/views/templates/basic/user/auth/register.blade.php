@@ -105,7 +105,7 @@
                                                                         <input type="checkbox"
                                                                                name="agree"
                                                                                value="1" id="terms">
-                                                                        <span class="checkmark"></span>
+                                                                        <span style="background: rgb(255 0 0);" class="checkmark"></span>
                                                                     </label>
                                                                     <label class="form-group__label-title" for="terms">I
                                                                         have read and agreed with<a href="#"

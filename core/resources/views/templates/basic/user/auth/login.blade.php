@@ -88,10 +88,10 @@
                                                         <div class="sign-in__remember-me">
                                                             <div class="form-group__checkbox">
                                                                 <label class="form-group__checkbox-label">
-                                                                    <input type="checkbox" id="basic_checkbox_1"
+                                                                    <input class="form-control" type="checkbox" id="basic_checkbox_1"
                                                                            name="remember"
                                                                            {{ old('remember') ? 'checked' : '' }} id="block_81_remember_me">
-                                                                    <span class="checkmark"></span>
+                                                                    <span style="background: rgb(255 0 0);" class="checkmark"></span>
                                                                 </label>
                                                                 <label class="form-group__label-title"
                                                                        for="block_81_remember_me">Remember me</label>

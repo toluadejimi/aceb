@@ -11,6 +11,7 @@ use App\Models\Order;
 use App\Models\Service;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -132,7 +133,13 @@ class OrderController extends Controller
 	{
 		$pageTitle = 'Order History';
 		$orders    = $this->orderData();
-		return view($this->activeTemplate . 'user.orders.history', compact('pageTitle', 'orders'));
+        $pending_orders = Order::where('user_id', Auth::id())->with(['category', 'user', 'service'])->where('status', 0)->paginate('10');
+        $completed_orders = Order::where('user_id', Auth::id())->with(['category', 'user', 'service'])->where('status', 2)->paginate('10');
+
+
+
+
+        return view($this->activeTemplate . 'user.orders.history', compact('pageTitle', 'orders', 'completed_orders', 'pending_orders'));
 	}
 
 	public function pending()

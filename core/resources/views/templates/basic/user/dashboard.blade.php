@@ -116,26 +116,29 @@
                                         <form action="order/create" method="post">
                                             @csrf
 
+                                            <h5>Create a new order</h5>
+                                            <hr>
+
                                             <div class="component_button_forms">
-                                                <div class="form-group">
-                                                    <div class="search-dropdown select2-container--default select2-container--below"
-                                                        style="position: relative">
-                                                        <div class="input-wrapper">
-                                                            <button type="button" class="input-wrapper__prepend">
-                                                                <span class="fas fa-search"></span>
-                                                            </button>
-                                                            <input placeholder="Search"
-                                                                class="select2-selection select2-selection--single form-control" />
-                                                            <!---->
-                                                        </div>
-                                                        <!---->
-                                                    </div>
-                                                </div>
+{{--                                                <div class="form-group">--}}
+{{--                                                    <div class="search-dropdown select2-container--default select2-container--below"--}}
+{{--                                                        style="position: relative">--}}
+{{--                                                        <div class="input-wrapper">--}}
+{{--                                                            <button type="button" class="input-wrapper__prepend">--}}
+{{--                                                                <span class="fas fa-search"></span>--}}
+{{--                                                            </button>--}}
+{{--                                                            <input placeholder="Search"--}}
+{{--                                                                class="select2-selection select2-selection--single form-control" />--}}
+{{--                                                            <!---->--}}
+{{--                                                        </div>--}}
+{{--                                                        <!---->--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
                                                 <div class="form-group">
                                                     <label for="orderform-category" class="control-label">Category</label>
                                                     <select class="form-control" name="cat" class="form-control" id="country-dropdown">
                                                         @foreach ($categories as $category)
-                                                         
+
                                                             <option data-type="12" value="{{ $category->id }}"
                                                                 data-template="{{ $category->id }} {{ $category->name }}">
                                                                 {{ $category->name }}
@@ -170,8 +173,8 @@
                                                             for="field-orderform-fields-quantity">Quantity</label>
                                                         <input class="form-control" type="number" autofocus id="num1" required name="qty"
                                                             id="field-orderform-fields-quantity" />
-                                                            
-                                                          
+
+
                                                             <div class="row ">
                                                                 <div class="col d-flex justify-content-start">
                                                                     Min: <span class="text-muted" id="min"> </span> |    Max: <span id="max" class="text-muted" ></span>
@@ -179,15 +182,15 @@
                                                                 <div class="col d-flex justify-content-end">
                                                                     NGN<span class=" help-block min-max" id="price"></span> </div>
                                                             </div>
-                                                            
+
                                                             <input type="number" hidden id="min2" name="min">
 
                                                     </div>
 
 
-                                                    
-                                          
-                                    
+
+
+
                                                 <div id="fields">
                                                     <div class="form-group fields">
                                                         <label class="control-label mt-3"
@@ -205,10 +208,10 @@
 
 
                                                             </p>
-                                                                
+
                                                         </div>
 
-                                                        
+
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -383,6 +386,6 @@
         })(jQuery);
     </script>
 
-  
+
 
 @endsection

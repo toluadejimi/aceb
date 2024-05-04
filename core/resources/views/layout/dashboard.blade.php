@@ -39,7 +39,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-   
+
     <style>
       .files-wrapper {
         display: flex;
@@ -80,7 +80,7 @@
         transition: all 0.4s;
       }
     </style>
-   
+
   </head>
   <body class="body body-internal">
     <div class="wrapper wrapper-sidebar-navbar">
@@ -133,7 +133,7 @@
                         >
                           <a
                             class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="/servies"
+                            href="/user/servies"
                           >
                             Services
                           </a>
@@ -158,7 +158,7 @@
                            Add Funds
                           </a>
                         </li>
-                        
+
                         <li
                           class="nav-item component-navbar-nav-item component-navbar-private-nav-item"
                         >
@@ -204,7 +204,7 @@
                         >
                           <a
                             class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="#"
+                            href="/user/order/mass"
                           >
                             Mass Orders
                           </a>
@@ -222,7 +222,7 @@
                               aria-expanded="false"
                             >
                               NGN {{number_format(Auth::user()->balance, 2)}}
-                            
+
                             </div>
                           </div>
                         </div>
@@ -242,7 +242,7 @@
                         >
                           <a
                             class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="logout"
+                            href="/user/logout"
                             >Logout</a
                           >
                         </li>
@@ -268,7 +268,7 @@
 
                   </div>
                 </div>
-                
+
                 <ul class="sidebar-block__left-menu editor__component-wrapper">
                   <li
                     class="component-sidebar__menu-item component-sidebar__menu-item-active"
@@ -283,7 +283,7 @@
                   <li class="component-sidebar__menu-item">
                     <a
                       class="component-sidebar__menu-item-link"
-                      href="/service"
+                      href="/user/service"
                     >
                       Services
                     </a>
@@ -296,7 +296,7 @@
                       Orders
                     </a>
                   </li>
-                
+
                   <li class="component-sidebar__menu-item">
                     <a
                       class="component-sidebar__menu-item-link"
@@ -340,7 +340,7 @@
                   <li class="component-sidebar__menu-item">
                     <a
                       class="component-sidebar__menu-item-link"
-                      href="#"
+                      href="/user/order/mass"
                     >
                     Mass order
                     </a>
@@ -366,20 +366,20 @@
       type="text/javascript"
       src="{{url('')}}/assets/dashboard/js3.js"
     ></script>
-  
-    
-    
+
+
+
   </script>
 
   <script>
-   
+
   </script>
 
-  
- 
+
+
 
   <template id="auto-clicker-autofill-popup"></template>
   <template id="auto-clicker-autofill-popup-tr"></template>
-  
+
 </body>
 </html>

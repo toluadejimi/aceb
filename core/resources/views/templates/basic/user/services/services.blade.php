@@ -1,480 +1,170 @@
-@extends($activeTemplate . 'layouts.mainuser')
+@extends('layout.dashboard')
 @section('content')
+    <div class="wrapper-content">
+        <div class="wrapper-content__header">
 
-<div class="content-body default-height">
-    <!-- row -->
-    <div class="container-fluid">
-
-        @if ($errors->any())
-            <div class="alert alert-danger my-4">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-        @if (session()->has('message'))
-            <div class="alert alert-success">
-                {{ session()->get('message') }}
-            </div>
-        @endif
-        @if (session()->has('error'))
-            <div class="alert alert-danger mt-2">
-                {{ session()->get('error') }}
-            </div>
-        @endif
-
-        <div class="row page-titles">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="user/dashboard">Dashboard</a></li>
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">All Services</a></li>
-            </ol>
         </div>
 
-        <div class="row">
+        <div class="wrapper-content">
+            <div class="wrapper-content__header"></div>
+            <div class="wrapper-content__body">
+                <!-- Main variables *content* -->
+                <div id="block_59">
+                    <div class="block-bg"></div>
+                    <div class="container-fluid">
+                        <meta name="viewport" content="width=991, initial-scale=0" />
+                        <div class="services-list">
+                            <div class="row">
+                                <div class="col">
+                                    <div
+                                        class="services-filters component_filter_form_group component_filter_card mb-3"
+                                    >
+                                        <div class="card">
+                                            <div class="row">
 
-            {{-- <div class="col-xl-12 col-md-12 p-6">
-                <div class="center">
-
-                      <img class="center mb-2"
-                        src="https://yourpanelassets.com/projects/pak2p/img/svg/facebook.svg" width="50" height="50"
-                        alt="">
-
-                    <img class="img-responsive" src="https://yourpanelassets.com/projects/pak2p/img/svg/youtube.svg"
-                        width="50" height="50" alt="">
-
-
-                    <img class="img-responsive" src="https://yourpanelassets.com/projects/pak2p/img/svg/tiktok.svg"
-                        width="50" height="50" alt="">
-
-                    <img class="img-responsive" src="https://yourpanelassets.com/projects/pak2p/img/svg/spotify.svg"
-                        alt="" width="50" height="50">
-
-                    <img class="img-responsive" src="https://yourpanelassets.com/projects/pak2p/img/svg/twitter.svg"
-                        alt="" width="50" height="50">
-
-                    <img class="img-responsive" src="https://yourpanelassets.com/projects/pak2p/img/svg/snapchat.svg"
-                        alt="" width="50" height="50">
-
-
-                    <img class="img-responsive" src="https://yourpanelassets.com/projects/pak2p/img/svg/telegram.svg"
-                        width="50" height="50" alt="">
-
-                    <img class="img-responsive mb-1" src="https://yourpanelassets.com/projects/pak2p/img/svg/soundcloud.svg"
-                        width="50" height="50" alt="">
-
-                        <img class="img-responsive"
-                                        src="https://yourpanelassets.com/projects/pak2p/img/svg/linkedin.svg" alt=""  width="50" height="50">
-
-
-
-                </div>
-
-
-
-
-
-
-            </div> --}}
-
-
-
-
-            {{-- <div class="row">
-
-
-                <div class="col-lg-1 col-md-1 col-sm-1 col-3">
-                    <div class="card b-radius--10">
-                        <div class="card-body">
-                            <a href="javascript:void(0);" class="media brand-category" data-id="twitch">
-                                <div class="icon"><img class="img-responsive"
-                                        src="https://yourpanelassets.com/projects/pak2p/img/svg/twitch.svg" alt="">
+                                                <div class="col">
+                                                    <div class="input-group">
+                                                        <input
+                                                            type="text"
+                                                            class="form-control"
+                                                            placeholder="Search"
+                                                            data-search-service="#service-table-59"
+                                                        />
+                                                        <span
+                                                            class="input-group-append component_button_search"
+                                                        >
+                                <button
+                                    class="btn btn-big-secondary"
+                                    type="button"
+                                    data-filter-serch-btn="true"
+                                >
+                                  <i class="fas fa-search"></i>
+                                </button>
+                              </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="services-list__table">
+                                        <div class="table-bg component_table">
+                                            <div
+                                                class="table-wr table-responsive editor__component-wrapper"
+                                            >
+                                                <table class="table" id="service-table-59">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th class="nowrap">Service</th>
+                                                        <th class="nowrap">Rate per 1000</th>
+                                                        <th class="nowrap">Min order</th>
+                                                        <th class="nowrap">Max order</th>
+                                                        <th class="nowrap" nowrap>
+                                                            <div class="d-flex align-items-center">
+                                                                <span>Average time</span>
+                                                                <span
+                                                                    class="ml-1 mr-1 fa fa-exclamation-circle"
+                                                                    data-toggle="tooltip"
+                                                                    data-placement="top"
+                                                                    title="The average time is based on 10 latest completed orders per 1000 quantity."
+                                                                ></span>
+                                                            </div>
+                                                        </th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody id="service-tbody">
+
+
+                                                    @forelse($service as $data)
+
+                                                        <tr data-filter-table-category-id="14538">
+
+                                                            <td
+                                                                data-label="ID"
+                                                                data-filter-table-service-id="1401"
+                                                            >
+                                                                {{$data->api_service_id}}
+                                                            </td>
+
+                                                            <td
+                                                                data-label="Service"
+                                                                class="table-service"
+                                                                data-filter-table-service-name="true"
+                                                            >
+                                                                {{$data->name}}
+                                                            </td>
+
+                                                            <td data-label="Rate per 1000">NGN {{number_format($data->price_per_k, 2)}}</td>
+                                                            <td data-label="Min order">{{$data->min}}</td>
+                                                            <td data-label="Max order">{{$data->max}}</td>
+                                                            <td data-label="Average time" class="nowrap">
+                                                                Instant
+                                                            </td>
+
+
+
+                                                        </tr>
+                                                    @empty
+                                                        No Service Found
+                                                    @endforelse
+
+
+
+                                                    </tbody>
+
+
+                                                </table>
+
+                                                <div class="d-flex justify-content-center my-5">
+                                                    {{$service->links()}}
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="modal fade"
+                            tabindex="-1"
+                            role="dialog"
+                            id="service-description-59"
+                        >
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <button
+                                            class="close"
+                                            type="button"
+                                            data-dismiss="modal"
+                                            aria-label="Close"
+                                        >
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                        <div class="service-description-content"></div>
+                                        <button
+                                            class="btn btn-block btn-big-primary"
+                                            id="createQuickOrder"
+                                            style="margin-top: 24px"
+                                        >
+                                            Create order
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-1 col-md-1 col-sm-1 col-3">
-                    <div class="card b-radius--10">
-                        <div class="card-body">
-                            <a href="javascript:void(0);" class="media brand-category" data-id="pintrest">
-                                <div class="icon"><img class="img-responsive"
-                                        src="https://yourpanelassets.com/projects/pak2p/img/svg/pintrest.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-
-
-        <div class="col-md-6 p-6">
-
-            <div class="card b-radius--10 mb-4 my-5">
-                <div class="card-body">
-                    <h5 class="p-2 mb-4">New Order</h5>
-
-
-
-                    <form action="order/create" method="post">
-                        @csrf
-
-                        <div class="row">
-
-                            <div class="col-md-12">
-                                <div class="form-group mb-3">
-
-                                    <label>Choose Category</label>
-
-                                    <select name="cat" class="form-control" id="country-dropdown">
-                                        <option value="">Choose Category</option>
-                                            @foreach($categories as $category)
-                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                            @endforeach
-                                    </select>
-
-
-                                </div>
-
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="form-group mb-3">
-
-                                    <div class="form-group mb-3">
-                                        <label>Choose Service</label>
-                                        <select id="state-dropdown" required name="service" placeholder="Choose service"
-                                            class="form-control">
-                                        </select>
-
-
-
-                                    </div>
-
-
-
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="col-md-12">
-                                <div class="form-group mb-3">
-
-                                    <div class="form-group mb-3">
-                                        <label>Link</label>
-                                        <input type="text" placeholder="Enter Link" autofocus id="link" required
-                                            name="link" class="form-control">
-                                        </input>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="col-md-12">
-                                <div class="form-group mb-3">
-
-                                    <div class="form-group mb-3">
-                                        <label>Quantity</label>
-                                        <input type="number" autofocus id="num1" required name="qty"
-                                            placeholder="Enter quantity" class="form-control">
-                                        </input>
-                                        <span class="text-muted" id="min">Min:</span> | <span class="text-muted"
-                                            id="max">Max:</span>
-                                    </div>
-
-                                    <input type="number" hidden id="min2" name="min">
-
-
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="col-md-12">
-                                <div class="form-group mb-3">
-
-                                    <div class="form-group mb-3">
-                                        <label>Charge</label>
-                                        <input type="number" disabled id="result2" name="charge" class="form-control">
-
-
-                                        </input>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="col-6 col-md-12">
-                                <button type="submit" class="btn btn-primary btn-lg mb-5" role="button">Order</button>
-                            </div>
-
-
-
-
-                        </div>
-
-                    </form>
-
-
-
-
-
                 </div>
             </div>
-        </div>
 
 
-        <div class="col-md-6">
-            <div class="card b-radius--10 mb-4 my-5">
-                <div class="card-body p-2">
-                    <label class="p-2">Order Information</label>
-
-
-
-                    <div class="row p-4">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label>Amount</label>
-                                <h5 class="" value=" " id="price"> </h5>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="row p-4">
-
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Details</label>
-                                <p class="" id="details"> </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-
-                </div>
-
-
-            </div>
-        </div>
 
     </div>
-</div>
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-
-                               /*------------------------------------------
-                               --------------------------------------------
-                               Country Dropdown Change Event
-                               --------------------------------------------
-                               --------------------------------------------*/
-                               $('#country-dropdown').on('change', function () {
-                                   var cat = this.value;
-                                   $("#state-dropdown").html('');
-                                   $.ajax({
-                                       url: "{{url('api/process-request')}}",
-                                       type: "GET",
-                                       data: {
-                                            cat: cat,
-                                           _token: '{{csrf_token()}}'
-                                       },
-                                       dataType: 'json',
-                                       success: function (result) {
-                                          console.log(result)
-
-
-                                          $('#state-dropdown').html('<option value="">-- Select Service --</option>');
-                                          $.each(result.services, function (key, value) {
-                                              $("#state-dropdown").append('<option value="' + value
-                                                  .id + '">' + value.name + '</option>');
-                                          });
-
-                                          $('#city-dropdown').html('<option value="">-- Amount --</option>');
-                                       }
-                                   });
-                               });
-
-
-                              /*------------------------------------------
-                               --------------------------------------------
-                               State Dropdown Change Event
-                               --------------------------------------------
-                               --------------------------------------------*/
-                               $('#state-dropdown').on('change', function () {
-                                var cat = this.value;
-                                $("#city-dropdown").html('');
-                                $.ajax({
-                                    url: "{{url('api/process-info')}}",
-                                    type: "GET",
-                                    data: {
-                                        cat: cat,
-                                        _token: '{{csrf_token()}}'
-                                    },
-                                    dataType: 'json',
-                                    success: function (res) {
-                                       console.log(res)
-                                       $.each(res.services, function (key, value) {
-                                        document.getElementById('price').innerHTML = value.price_per_k;
-                                        document.getElementById('min').innerHTML = value.min;
-                                        document.getElementById('max').innerHTML =  value.max;
-                                        document.getElementById('details').innerHTML =  value.name;
-
-
-                                        const price2 =  document.getElementById('price').value = value.price_per_k;
-                                        const min2 =    document.getElementById('min2').value = value.min;
-
-
-                                        });
-
-
-                                    }
-                                });
-                            });
-
-                        });
-
-
-
-
-
-
-
-</script>
-
-
-<script>
-    $('input').keyup(function() { // run anytime the value changes
-
-        var num1 = document.getElementById('num1').value; // convert it to a float
-        var rate = document.getElementById('price').value; // convert it to a float
-
-        var result =  document.getElementById('result2').value = Number(num1) * Number(rate) / 1000;
-
-        console.log(result);
-        console.log(num1);
-        console.log(rate);
-
-
-
-    });
-</script>
-
-<script>
-    (function($) {
-            "use strict";
-
-            $('.detailsBtn').on('click', function() {
-                var modal = $('#detailsModal');
-                var details = $(this).data('details');
-                modal.find('#details').html(details);
-                modal.modal('show');
-            });
-
-            $('.orderBtn').on('click', function() {
-                var modal = $('#orderModal');
-                $('.resetForm').trigger('reset');
-                var url = $(this).data('url');
-                var pricePerK = parseFloat($(this).data('price_per_k'));
-                var min = $(this).data('min');
-                var max = $(this).data('max');
-                let apiProviderId = $(this).data('api_provider_id');
-                //Calculate total price
-                $(document).on("keyup", "#quantity", function() {
-                    var quantity = parseInt($('#quantity').val());
-                    var totalPrice = parseFloat((pricePerK / 1000) * quantity);
-                    modal.find('input[name=price]').val("{{ $general->cur_sym }}" + totalPrice
-                        .toFixed(2));
-                });
-
-                modal.find('form').attr('action', url);
-                modal.find('input[name=quantity]').attr('min', min).attr('max', max);
-                modal.find('input[name=min]').val(min);
-                modal.find('input[name=max]').val(max);
-                modal.find('input[name=api_provider_id]').val(apiProviderId)
-                modal.modal('show');
-            });
-
-            //Scroll to paginate position
-            var pathName = document.location.pathname;
-            window.onbeforeunload = function() {
-                var scrollPosition = $(document).scrollTop();
-                sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
-            }
-            if (sessionStorage["scrollPosition_" + pathName]) {
-                $(document).scrollTop(sessionStorage.getItem("scrollPosition_" + pathName));
-            }
-        })(jQuery);
-</script>
-
-<script>
-    function cardsCenter(){
-		/*  testimonial one function by = owl.carousel.js */
-		jQuery('.card-slider').owlCarousel({
-			loop:true,
-			margin:0,
-			nav:true,
-			//center:true,
-			slideSpeed: 3000,
-			paginationSpeed: 3000,
-			dots: true,
-			navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
-			responsive:{
-				0:{
-					items:1
-				},
-				576:{
-					items:1
-				},
-				800:{
-					items:1
-				},
-				991:{
-					items:1
-				},
-				1200:{
-					items:1
-				},
-				1600:{
-					items:1
-				}
-			}
-		})
-	}
-
-	jQuery(window).on('load',function(){
-		setTimeout(function(){
-			cardsCenter();
-		}, 1000);
-	});
-
-	jQuery(document).ready(function(){
-		setTimeout(function(){
-			dlabSettingsOptions.version = 'dark';
-			new dlabSettings(dlabSettingsOptions);
-		},1000)
-		jQuery(window).on('resize',function(){
-			dlabSettingsOptions.version = 'dark';
-			new dlabSettings(dlabSettingsOptions);
-			jQuery('.dz-theme-mode').addClass('active');
-		});
-	});
-</script>
-
-</div>
-@endsection();
+@endsection
