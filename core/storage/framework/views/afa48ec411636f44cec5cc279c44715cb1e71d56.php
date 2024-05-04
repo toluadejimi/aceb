@@ -1,5 +1,4 @@
-@extends('layout.dashboard')
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="wrapper-content">
         <div class="wrapper-content__header">
 
@@ -23,12 +22,12 @@
                                 <ul class="list-group">
 
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        @lang('Username')
-                                        <span class="fw-bold">{{ __($user->username) }}</span>
+                                        <?php echo app('translator')->get('Username'); ?>
+                                        <span class="fw-bold"><?php echo e(__($user->username)); ?></span>
                                     </li>
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        @lang('Email')
-                                        <span class="fw-bold">{{ $user->email }}</span>
+                                        <?php echo app('translator')->get('Email'); ?>
+                                        <span class="fw-bold"><?php echo e($user->email); ?></span>
                                     </li>
                                 </ul>
                             </div>
@@ -38,28 +37,28 @@
                     <div class="col-lg-9 col-md-9 mb-30">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title border-bottom pb-2">@lang('Change Password')</h5>
+                                <h5 class="card-title border-bottom pb-2"><?php echo app('translator')->get('Change Password'); ?></h5>
 
                                 <form action="" method="POST" enctype="multipart/form-data">
-                                    @csrf
+                                    <?php echo csrf_field(); ?>
 
                                     <div class="form-group">
-                                        <label>@lang('Password')</label>
+                                        <label><?php echo app('translator')->get('Password'); ?></label>
                                         <input class="form-control" type="password" name="current_password" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <label>@lang('New Password')</label>
+                                        <label><?php echo app('translator')->get('New Password'); ?></label>
                                         <input class="form-control" type="password" name="password" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <label>@lang('Confirm Password')</label>
+                                        <label><?php echo app('translator')->get('Confirm Password'); ?></label>
                                         <input class="form-control" type="password" name="password_confirmation"
                                                required>
                                     </div>
                                     <button type="submit"
-                                            class="btn btn-danger w-100 btn-lg h-45">@lang('Submit')</button>
+                                            class="btn btn-danger w-100 btn-lg h-45"><?php echo app('translator')->get('Submit'); ?></button>
                                 </form>
                             </div>
                         </div>
@@ -69,9 +68,11 @@
         </div>
     </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@push('breadcrumb-plugins')
-    <a href="{{ route('user.profile.setting') }}" class="btn btn-sm btn-outline--primary"><i
-            class="las la-user"></i>@lang('Profile Setting')</a>
-@endpush
+<?php $__env->startPush('breadcrumb-plugins'); ?>
+    <a href="<?php echo e(route('user.profile.setting')); ?>" class="btn btn-sm btn-outline--primary"><i
+            class="las la-user"></i><?php echo app('translator')->get('Profile Setting'); ?></a>
+<?php $__env->stopPush(); ?>
+
+<?php echo $__env->make('layout.dashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/aceboost/core/resources/views/templates/basic/user/password.blade.php ENDPATH**/ ?>

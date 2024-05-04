@@ -1,5 +1,4 @@
-@extends('layout.dashboard')
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="wrapper-content">
         <div class="wrapper-content__header">
 
@@ -14,8 +13,8 @@
             </div>
 
             <div class="container-fluid">
-                <a href="{{ route('user.change.password') }}" class="btn btn-sm btn-outline-primary mb-3"><i
-                        class="las la-key"></i>@lang('Update Password')</a>
+                <a href="<?php echo e(route('user.change.password')); ?>" class="btn btn-sm btn-outline-primary mb-3"><i
+                        class="las la-key"></i><?php echo app('translator')->get('Update Password'); ?></a>
 
 
                 <div class="row mb-none-30">
@@ -26,13 +25,13 @@
                                 <ul class="list-group">
 
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        @lang('username')
-                                        <span class="fw-bold">{{ __($user->username) }}</span>
+                                        <?php echo app('translator')->get('username'); ?>
+                                        <span class="fw-bold"><?php echo e(__($user->username)); ?></span>
                                     </li>
 
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        @lang('Email')
-                                        <span class="fw-bold">{{ $user->email }}</span>
+                                        <?php echo app('translator')->get('Email'); ?>
+                                        <span class="fw-bold"><?php echo e($user->email); ?></span>
                                     </li>
 
                                 </ul>
@@ -43,57 +42,57 @@
                     <div class="col-xl-9 col-lg-8 mb-30">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title  border-bottom">@lang('Profile Information')</h5>
+                                <h5 class="card-title  border-bottom"><?php echo app('translator')->get('Profile Information'); ?></h5>
 
                                 <form action="" method="POST" enctype="multipart/form-data">
-                                    @csrf
+                                    <?php echo csrf_field(); ?>
                                     <div class="row">
 
 
                                         <div class="col-md-6">
                                             <div class="form-group ">
-                                                <label>@lang('First Name')</label>
+                                                <label><?php echo app('translator')->get('First Name'); ?></label>
                                                 <input class="form-control" type="text" name="firstname"
-                                                       value="{{ $user->firstname }}" required>
+                                                       value="<?php echo e($user->firstname); ?>" required>
                                             </div>
 
                                             <div class="form-group ">
-                                                <label>@lang('Last Name')</label>
+                                                <label><?php echo app('translator')->get('Last Name'); ?></label>
                                                 <input class="form-control" type="text" name="lastname"
-                                                       value="{{ $user->lastname }}"
+                                                       value="<?php echo e($user->lastname); ?>"
                                                        required>
                                             </div>
 
                                             <div class="form-group">
-                                                <label>@lang('Email')</label>
+                                                <label><?php echo app('translator')->get('Email'); ?></label>
                                                 <input class="form-control" type="email" name="email"
-                                                       value="{{ $user->email }}"
+                                                       value="<?php echo e($user->email); ?>"
                                                        required>
                                             </div>
                                             <div class="form-group">
-                                                <label>@lang('Address')</label>
+                                                <label><?php echo app('translator')->get('Address'); ?></label>
                                                 <input type="text" class="form-control" name="address"
-                                                       value="{{ $user->address->address }}">
+                                                       value="<?php echo e($user->address->address); ?>">
                                             </div>
                                             <div class="form-group">
-                                                <label>@lang('State')</label>
+                                                <label><?php echo app('translator')->get('State'); ?></label>
                                                 <input type="text" class="form-control" name="state"
-                                                       value="{{ $user->address->state }}">
+                                                       value="<?php echo e($user->address->state); ?>">
                                             </div>
                                             <div class="form-group">
-                                                <label>@lang('Zip Code')</label>
+                                                <label><?php echo app('translator')->get('Zip Code'); ?></label>
                                                 <input type="text" class="form-control" name="zip"
-                                                       value="{{ $user->address->zip }}">
+                                                       value="<?php echo e($user->address->zip); ?>">
                                             </div>
 
                                             <div class="form-group">
-                                                <label>@lang('City')</label>
+                                                <label><?php echo app('translator')->get('City'); ?></label>
                                                 <input type="text" class="form-control" name="city"
-                                                       value="{{ $user->address->city }}">
+                                                       value="<?php echo e($user->address->city); ?>">
                                             </div>
 
                                             <button type="submit"
-                                                    class="btn btn-danager h-45 w-100 my-2">@lang('Submit')</button>
+                                                    class="btn btn-danager h-45 w-100 my-2"><?php echo app('translator')->get('Submit'); ?></button>
 
                                         </div>
 
@@ -107,5 +106,7 @@
             </div>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('layout.dashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/aceboost/core/resources/views/templates/basic/user/profile_setting.blade.php ENDPATH**/ ?>

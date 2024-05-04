@@ -236,7 +236,7 @@
                         >
                           <a
                             class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="#"
+                            href="/user/profile-setting"
                             >Account</a
                           >
                         </li>
