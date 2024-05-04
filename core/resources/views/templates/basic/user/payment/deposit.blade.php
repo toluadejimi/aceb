@@ -135,7 +135,11 @@
                                             <tr>
 
 
+                                                <th> </th>
                                                 <th class="">@lang('Amount')</th>
+                                                <th> </th>
+                                                <th> </th>
+                                                <th> </th>
                                                 <th class="">@lang('Action')</th>
 
                                             </tr>
@@ -223,6 +227,7 @@
                                                 {{ showDateTime($deposit->created_at) }}<br>{{ diffForHumans($deposit->created_at) }}
                                             </td> --}}
 
+                                                    <td></td>
                                                     <td class="">
 
                                                         N {{ showAmount($deposit->amount + $deposit->charge) }}
@@ -245,8 +250,12 @@
 {{--                                                    </td>--}}
 
 
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
 
-                                                    @if ($deposit->status == 2)
+
+                                                @if ($deposit->status == 2)
                                                         <td>
                                                             <a href="#" data-bs-toggle="modal"
                                                                 data-bs-target="#exampleModal{{ $deposit->id }}"

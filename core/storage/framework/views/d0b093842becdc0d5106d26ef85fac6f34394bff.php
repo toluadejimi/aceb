@@ -136,7 +136,11 @@
                                             <tr>
 
 
+                                                <th> </th>
                                                 <th class=""><?php echo app('translator')->get('Amount'); ?></th>
+                                                <th> </th>
+                                                <th> </th>
+                                                <th> </th>
                                                 <th class=""><?php echo app('translator')->get('Action'); ?></th>
 
                                             </tr>
@@ -215,6 +219,7 @@
 
                                                     
 
+                                                    <td></td>
                                                     <td class="">
 
                                                         N <?php echo e(showAmount($deposit->amount + $deposit->charge)); ?>
@@ -238,8 +243,12 @@
 
 
 
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
 
-                                                    <?php if($deposit->status == 2): ?>
+
+                                                <?php if($deposit->status == 2): ?>
                                                         <td>
                                                             <a href="#" data-bs-toggle="modal"
                                                                 data-bs-target="#exampleModal<?php echo e($deposit->id); ?>"
