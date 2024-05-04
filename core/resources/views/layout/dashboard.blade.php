@@ -21,7 +21,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>New order</title>
+    <title>ACEBOOSTS</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="google-site-verification" content="" />
@@ -97,7 +97,9 @@
                   <div class="navbar-private__header">
                     <div class="sidebar-block__top-brand">
                       <div class="component-navbar-brand component-navbar-public-brand">
+                          <a href="/user/dashboard">
                       <img src="{{url('')}}/assets/pax/logo.svg" alt="logo">
+                     </a>
                       </div>
                     </div>
                     <button
@@ -133,7 +135,7 @@
                         >
                           <a
                             class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="/user/servies"
+                            href="/user/service"
                           >
                             Services
                           </a>
@@ -143,7 +145,7 @@
                         >
                           <a
                             class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="user/order/history"
+                            href="/user/order/history"
                           >
                             Orders
                           </a>
