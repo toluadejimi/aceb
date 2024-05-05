@@ -50,13 +50,13 @@
                                                 <div class="text-center">
 
                                                     <h3>Account Name</h3>
-                                                    <p>Text Account name</p>
+                                                    <p>Acelogstore A.O</p>
                                                     <hr>
                                                     <h3>Account No</h3>
-                                                    <p>0123456789</p>
+                                                    <p>6511568414</p>
                                                     <hr>
-                                                    <h3>Bank Account</h3>
-                                                    <p>Test Bank</p>
+                                                    <h3>Bank Nam</h3>
+                                                    <p>Moniepoint</p>
 
 
 

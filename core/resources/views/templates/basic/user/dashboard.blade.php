@@ -4,9 +4,6 @@
         <div class="wrapper-content__header"></div>
         <div class="wrapper-content__body">
 
-
-
-
             <div id="block_61">
                 <div class="block-bg"></div>
                 <div class="container-fluid">
@@ -23,12 +20,9 @@
                                                     before. </strong>
                                             </p><br />
 
-                                            <p>Reach us by <a href="#">clicking here</a> or whatsapp +2347047492899
+                                            <p>Reach us by <a href="https://api.whatsapp.com/send?phone=2348123053541&text=Hello, i want to make report.">clicking here</a> or whatsapp +2348123053541
                                                 for payment related issues. </p>
                                             <br />
-
-                                            <p>Please create a site ticket for order issues. That's the fastest way to get
-                                                resolution.  </p>
 
 
                                         </div>
@@ -39,8 +33,6 @@
                     </div>
                 </div>
             </div>
-
-
             <div id="block_61">
                 <div class="block-bg"></div>
                 <div class="container-fluid">
@@ -79,9 +71,6 @@
                     </div>
                 </div>
             </div>
-
-
-
 
             @if ($errors->any())
                 <div class="alert alert-danger my-4">
@@ -238,7 +227,7 @@
         </div>
 
     </div>
-    </div>
+
 
 
 

@@ -32,7 +32,7 @@
 
                                             <p>Make sure to pay in the exact amount you inputted.</p><br />
 
-                                            <p>Reach us by <a href="#">clicking here</a> or whatsapp +2347047492899
+                                            <p>Reach us by <a href="https://api.whatsapp.com/send?phone=2348123053541&text=Hello, i want to make report.">clicking here</a> or whatsapp
                                                 for payment related issues. </p>
                                             <br />
 

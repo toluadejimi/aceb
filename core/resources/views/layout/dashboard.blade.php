@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
+
 <html id="theme_21" lang="en" webcrx="">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       body {
         transition: opacity ease-in 0.2s;
@@ -18,6 +19,29 @@
  z-index: 9999
     }
     </style>
+
+      <style>
+          .float{
+              position:fixed;
+              width:60px;
+              height:60px;
+              bottom:40px;
+              right:40px;
+              background-color:#25d366;
+              color:#FFF;
+              border-radius:50px;
+              text-align:center;
+              font-size:30px;
+              box-shadow: 2px 2px 3px #999;
+              z-index:100;
+          }
+
+          .my-float{
+              margin-top:16px;
+          }
+      </style>
+
+
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -376,6 +400,21 @@
   <script>
 
   </script>
+
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a style="color: white" href=" https://chat.whatsapp.com/E6cxlJmfLrK6Q7oly0hdKc" class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
+
+
+
+
+
+
+
+
 
 
 

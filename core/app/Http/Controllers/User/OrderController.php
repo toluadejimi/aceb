@@ -136,10 +136,15 @@ class OrderController extends Controller
         $pending_orders = Order::where('user_id', Auth::id())->with(['category', 'user', 'service'])->where('status', 0)->paginate('10');
         $completed_orders = Order::where('user_id', Auth::id())->with(['category', 'user', 'service'])->where('status', 2)->paginate('10');
 
+        $completed_order = Order::where('user_id', Auth::id())->with(['category', 'user', 'service'])->where('status', 2)->count();
+
+        $total_order = Order::where('user_id', Auth::id())->with(['category', 'user', 'service'])->count();
+
+        $bought = Order::where('user_id', Auth::id())->with(['category', 'user', 'service'])->where('status', 2)->sum('price');
 
 
 
-        return view($this->activeTemplate . 'user.orders.history', compact('pageTitle', 'orders', 'completed_orders', 'pending_orders'));
+        return view($this->activeTemplate . 'user.orders.history', compact('pageTitle', 'orders', 'completed_order', 'bought', 'total_order', 'completed_orders', 'pending_orders'));
 	}
 
 	public function pending()
