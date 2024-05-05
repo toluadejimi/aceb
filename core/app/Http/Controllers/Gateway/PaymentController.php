@@ -296,7 +296,7 @@ class PaymentController extends Controller
                 $transaction->post_balance = $user->balance;
                 $transaction->charge = $deposit->charge;
                 $transaction->trx_type = '+';
-                $transaction->details = 'Deposit Via ' . $deposit->gatewayCurrency()->name;
+                $transaction->details = 'Deposit Via ' . "manual";
                 $transaction->trx = $deposit->trx;
                 $transaction->remark = 'deposit';
                 $transaction->save();
@@ -364,7 +364,6 @@ class PaymentController extends Controller
 
 
         $email = User::where('id', Auth::id())->first()->email;
-
         $adminNotification = new AdminNotification();
         $adminNotification->user_id = Auth::id();
         $adminNotification->title = 'Payment request from '.Auth::user()->username;
