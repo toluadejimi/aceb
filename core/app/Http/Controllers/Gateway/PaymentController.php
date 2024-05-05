@@ -310,7 +310,7 @@ class PaymentController extends Controller
                 }
 
                 notify($user, $isManual ? 'DEPOSIT_APPROVE' : 'DEPOSIT_COMPLETE', [
-                    'method_name' => $deposit->gatewayCurrency()->name,
+                    'method_name' => "manual",
                     'method_currency' => $deposit->method_currency,
                     'method_amount' => showAmount($deposit->final_amo),
                     'amount' => showAmount($deposit->amount),
