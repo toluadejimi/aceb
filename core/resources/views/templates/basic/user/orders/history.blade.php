@@ -134,7 +134,7 @@
 
 
 
-                    <div class="card2">
+                    <div class="card2" style="max-width: 400px; overflow: scroll;">
 
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -172,7 +172,6 @@
                                                             <th>@lang('Service')</th>
                                                             <th>@lang('Link')</th>
                                                             <th>@lang('Quantity')</th>
-                                                            <th>@lang('Counter')</th>
                                                             <th>@lang('Remains')</th>
                                                             <th>@lang('Date')</th>
                                                             <th>@lang('Status')</th>
@@ -182,16 +181,15 @@
                                                         @forelse ($orders as $item)
                                                             <tr>
                                                                 <td>{{ $item->id }}</td>
-                                                                <td class="break_line">{{ __($item->category->name ) ?? "service" }}</td>
-                                                                <td class="break_line">
+                                                                <td style="font-size: 10px" class="break_line">{{ __($item->category->name ) ?? "service" }}</td>
+                                                                <td style="font-size: 10px" class="break_line">
                                                                     {{ __($item->service->name ?? "service" )  }}</td>
-                                                                <td class="break_line"><a
+                                                                <td style="font-size: 10px" class="break_line"><a
                                                                         href="{{ empty(parse_url($item->link, PHP_URL_SCHEME)) ? 'https://' : null }}{{ $item->link }}"
                                                                         target="_blank">{{ $item->link }}</a></td>
-                                                                <td>{{ $item->quantity ?? "0" }}</td>
-                                                                <td>{{ $item->start_counter ?? "0" }}</td>
-                                                                <td>{{ $item->remain ?? "0" }}</td>
-                                                                <td>{{ showDateTime($item->created_at) ?? "date" }}</td>
+                                                                <td style="font-size: 10px" >{{ $item->quantity ?? "0" }}</td>
+                                                                <td style="font-size: 10px">{{ $item->remain ?? "0" }}</td>
+                                                                <td style="font-size: 10px">{{ showDateTime($item->created_at) ?? "date" }}</td>
                                                                 <td>
                                                                     @if($item->status == 0)
                                                                         <span class="badge badge-danger light border-0">Pending</span>

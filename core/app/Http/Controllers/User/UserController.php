@@ -178,11 +178,23 @@ class UserController extends Controller
             return $services->active();
         })->orderBy('name')->get();
 
-        $service = Service::paginate(20);
+        $service = Service::latest()->paginate(20);
 
         $whatsapp_link = GeneralSetting::where('id', 1)->first()->whatsapp_link;
         return view($this->activeTemplate . 'user.services.services', compact('pageTitle', 'categories','service', 'whatsapp_link'));
     }
+
+    public function search_services(request $request)
+    {
+        $pageTitle  = 'Services';
+        $service = Service::where('api_service_id', $request->id)->paginate(20);
+        $whatsapp_link = GeneralSetting::where('id', 1)->first()->whatsapp_link;
+        return view($this->activeTemplate . 'user.services.services', compact('pageTitle','service', 'whatsapp_link'));
+
+    }
+
+
+
 
     public function serviceCategory($id)
     {
