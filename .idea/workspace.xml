@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d92353d4-96b6-4d02-90f0-4f6d196d499c" name="Changes" comment="bot added">
-      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/Xa76b509ff34e304a7ea962ac98897a63.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/Xde02c9659e00075f8f770ea2d6321202.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/core/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/core/storage/logs/laravel.log" afterDir="false" />
-    </list>
+    <list default="true" id="d92353d4-96b6-4d02-90f0-4f6d196d499c" name="Changes" comment="bot added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -309,7 +304,7 @@
       <workItem from="1714950146490" duration="429000" />
       <workItem from="1716729798933" duration="1284000" />
       <workItem from="1717946411502" duration="9667000" />
-      <workItem from="1718111394030" duration="5658000" />
+      <workItem from="1718111394030" duration="6013000" />
     </task>
     <task id="LOCAL-00001" summary="caetegory adjusted">
       <option name="closed" value="true" />
@@ -535,7 +530,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718119404202</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="bot added">
+      <option name="closed" value="true" />
+      <created>1718120090020</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1718120090020</updated>
+    </task>
+    <task id="LOCAL-00030" summary="bot added">
+      <option name="closed" value="true" />
+      <created>1718120096973</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1718120096973</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
