@@ -55,10 +55,8 @@
                                     <div class="component-navbar-collapse-divider"></div>
 
                                     <div class="d-flex component-navbar-collapse">
-                                        <ul class="navbar-nav" style="color: white>
-                                            <li class=" nav-item component-navbar-nav-item component_navbar
-                                            component-navbar-public-nav-item
-                                        ">
+                                        <ul class="navbar-nav nav-item component-navbar-nav-item component_navbar component-navbar-public-nav-item" style="color: white>
+                                            <li class=">
                                         <a class="component-navbar-nav-link component-navbar-nav-link__navbar-public component-navbar-nav-link-active__navbar-public"
                                            href="/"> Sign in</a>
                                         </li>

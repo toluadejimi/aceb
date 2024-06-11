@@ -133,7 +133,7 @@
 
 
 
-                    <div class="card2">
+                    <div class="card2" style="max-width: 400px; overflow: scroll;">
 
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -171,7 +171,6 @@
                                                             <th><?php echo app('translator')->get('Service'); ?></th>
                                                             <th><?php echo app('translator')->get('Link'); ?></th>
                                                             <th><?php echo app('translator')->get('Quantity'); ?></th>
-                                                            <th><?php echo app('translator')->get('Counter'); ?></th>
                                                             <th><?php echo app('translator')->get('Remains'); ?></th>
                                                             <th><?php echo app('translator')->get('Date'); ?></th>
                                                             <th><?php echo app('translator')->get('Status'); ?></th>
@@ -181,16 +180,15 @@
                                                         <?php $__empty_1 = true; $__currentLoopData = $orders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                                                             <tr>
                                                                 <td><?php echo e($item->id); ?></td>
-                                                                <td class="break_line"><?php echo e(__($item->category->name ) ?? "service"); ?></td>
-                                                                <td class="break_line">
+                                                                <td style="font-size: 10px" class="break_line"><?php echo e(__($item->category->name ) ?? "service"); ?></td>
+                                                                <td style="font-size: 10px" class="break_line">
                                                                     <?php echo e(__($item->service->name ?? "service" )); ?></td>
-                                                                <td class="break_line"><a
+                                                                <td style="font-size: 10px" class="break_line"><a
                                                                         href="<?php echo e(empty(parse_url($item->link, PHP_URL_SCHEME)) ? 'https://' : null); ?><?php echo e($item->link); ?>"
                                                                         target="_blank"><?php echo e($item->link); ?></a></td>
-                                                                <td><?php echo e($item->quantity ?? "0"); ?></td>
-                                                                <td><?php echo e($item->start_counter ?? "0"); ?></td>
-                                                                <td><?php echo e($item->remain ?? "0"); ?></td>
-                                                                <td><?php echo e(showDateTime($item->created_at) ?? "date"); ?></td>
+                                                                <td style="font-size: 10px" ><?php echo e($item->quantity ?? "0"); ?></td>
+                                                                <td style="font-size: 10px"><?php echo e($item->remain ?? "0"); ?></td>
+                                                                <td style="font-size: 10px"><?php echo e(showDateTime($item->created_at) ?? "date"); ?></td>
                                                                 <td>
                                                                     <?php if($item->status == 0): ?>
                                                                         <span class="badge badge-danger light border-0">Pending</span>
