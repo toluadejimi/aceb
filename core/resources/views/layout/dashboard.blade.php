@@ -154,6 +154,16 @@
                             New order
                           </a>
                         </li>
+                           <li
+                               class="nav-item component-navbar-nav-item component-navbar-private-nav-item"
+                           >
+                          <a
+                              class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
+                              href="/user/order/mass"
+                          >
+                            Mass Orders
+                          </a>
+                        </li>
                         <li
                           class="nav-item component-navbar-nav-item component-navbar-private-nav-item"
                         >
@@ -195,46 +205,17 @@
                             API
                           </a>
                         </li>
-                        <li
-                          class="nav-item component-navbar-nav-item component-navbar-private-nav-item"
-                        >
-                          <a
-                            class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="#"
+                          <li
+                              class="nav-item component-navbar-nav-item component-navbar-private-nav-item"
                           >
-                            Affiliates
-                          </a>
-                        </li>
-                        <li
-                          class="nav-item component-navbar-nav-item component-navbar-private-nav-item"
-                        >
                           <a
-                            class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="#"
-                          >
-                            Child panel
-                          </a>
-                        </li>
-                        <li
-                          class="nav-item component-navbar-nav-item component-navbar-private-nav-item"
-                        >
-                          <a
-                            class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="#"
+                              class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
+                              href="#"
                           >
                            Tickets
                           </a>
                         </li>
-                        <li
-                          class="nav-item component-navbar-nav-item component-navbar-private-nav-item"
-                        >
-                          <a
-                            class="component-navbar-nav-link component-navbar-nav-link__navbar-private"
-                            href="/user/order/mass"
-                          >
-                            Mass Orders
-                          </a>
-                        </li>
+
                       </ul>
                       <ul class="navbar-nav navbar-nav-currencies">
                         <div
@@ -379,6 +360,27 @@
       </div>
 
       @yield('content')
+
+
+
+        <footer>
+
+
+            <div style="background: #174584; border-radius: 0px;" class="card">
+                <div  class="card-body">
+
+                    <h5 class="d-flex justify-content-center text-white">NEED HELP?</h5>
+                    <p class="d-flex justify-content-center text-white">Send a message on Whatsapp using the  <a href="https://api.whatsapp.com/send?phone=2348123053541&text=Hello, i want to make report."> Link</a></p>
+
+
+                </div>
+
+            </div>
+
+
+
+
+        </footer>
 
       <script
       type="text/javascript"

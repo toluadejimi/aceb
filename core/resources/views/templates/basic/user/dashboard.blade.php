@@ -4,73 +4,99 @@
         <div class="wrapper-content__header"></div>
         <div class="wrapper-content__body">
 
-            <div id="block_61">
-                <div class="block-bg"></div>
-                <div class="container-fluid">
-                    <div class="new_order-block">
-                        <div class="row new-order-form">
-                            <div class="col-lg-8">
-                                <div class="component_form_group component_card component_radio_button">
-                                    <div class="card2">
-                                        <div class="card-body">
+{{--            <div id="block_61">--}}
+{{--                <div class="block-bg"></div>--}}
+{{--                <div class="container-fluid">--}}
+{{--                    <div class="new_order-block">--}}
+{{--                        <div class="row new-order-form">--}}
+{{--                            <div class="col-lg-8">--}}
+{{--                                <div class="component_form_group component_card component_radio_button">--}}
+{{--                                    <div class="card2">--}}
+{{--                                        <div class="card-body">--}}
 
-                                            <p>IMPORTANT  | Always input payment amount and click pay to get a new account
-                                                number every time you want to deposit.
-                                                <br><strong> Do not pay into an old account number you've used
-                                                    before. </strong>
-                                            </p><br />
-
-                                            <p>Reach us by <a href="https://api.whatsapp.com/send?phone=2348123053541&text=Hello, i want to make report.">clicking here</a> or whatsapp +2348123053541
-                                                for payment related issues. </p>
-                                            <br />
+{{--                                            <p>IMPORTANT  | Always input payment amount and click pay to get a new account--}}
+{{--                                                number every time you want to deposit.--}}
+{{--                                                <br><strong> Do not pay into an old account number you've used--}}
+{{--                                                    before. </strong>--}}
+{{--                                            </p><br />--}}
 
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{{--                                            <a href="#" style="color: white; font-size: 13px;" class="btn btn-dark btn-lg my-3"><i class="fa fa-video"> </i> Watch how to fund your wallet</a>--}}
+
+{{--                                            <p>Reach us by <a href="https://api.whatsapp.com/send?phone=2348123053541&text=Hello, i want to make report.">clicking here</a> or whatsapp +2348123053541--}}
+{{--                                                for payment related issues. </p>--}}
+{{--                                            <br />--}}
+
+
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+
+
+            <div class="d-flex justify-content-center my-5">
+
+                <div class="btn-group" role="group" aria-label="Third group">
+                    <a style="font-size: 12px; color: white; background: #00688bc2;" href="https://aceboosts.com" target="_blank" class="btn btn w-200 mt-1"> ♠ Buy Logs</a>
+                    <a style="font-size: 12px; color: white; background: #8b0000c2;" href="https://acesmsverify.com "  target="_blank" class="btn w-200 mt-1"> ♠ Buy Number Verification</a></i>
+
                 </div>
+
+
+
+
             </div>
-            <div id="block_61">
-                <div class="block-bg"></div>
-                <div class="container-fluid">
-                    <div class="new_order-block">
-                        <div class="row new-order-form">
-                            <div class="col-lg-8">
-                                <div class="component_form_group component_card component_radio_button">
-                                    <div class="card2">
-                                        <div class="card-body">
 
-                                            <ul>
 
-                                                <li>
-                                                    <a href="#">   TUTORIALS TO GET YOU STARTED</a>
-                                                </li>
 
-                                                <li>
-                                                    <a href="#">   UNDERSTANDING OUR DESCRIPTIONS</a>
-                                                </li>
 
-                                                <li>
-                                                    <a href="#">   UNDERSTANDING YOUR ORDER STATUS</a>
-                                                </li>
 
-                                                <li>
-                                                    <a href="#">   WHY IS YOUR ORDER NOT DELIVERING</a>
-                                                </li>
 
-                                            </ul>
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+{{--            <div id="block_61">--}}
+{{--                <div class="block-bg"></div>--}}
+{{--                <div class="container-fluid">--}}
+{{--                    <div class="new_order-block">--}}
+{{--                        <div class="row new-order-form">--}}
+{{--                            <div class="col-lg-8">--}}
+{{--                                <div class="component_form_group component_card component_radio_button">--}}
+{{--                                    <div class="card2">--}}
+{{--                                        <div class="card-body">--}}
+
+{{--                                            <ul>--}}
+
+{{--                                                <li>--}}
+{{--                                                    <a href="#">   TUTORIALS TO GET YOU STARTED</a>--}}
+{{--                                                </li>--}}
+
+{{--                                                <li>--}}
+{{--                                                    <a href="#">   UNDERSTANDING OUR DESCRIPTIONS</a>--}}
+{{--                                                </li>--}}
+
+{{--                                                <li>--}}
+{{--                                                    <a href="#">   UNDERSTANDING YOUR ORDER STATUS</a>--}}
+{{--                                                </li>--}}
+
+{{--                                                <li>--}}
+{{--                                                    <a href="#">   WHY IS YOUR ORDER NOT DELIVERING</a>--}}
+{{--                                                </li>--}}
+
+{{--                                            </ul>--}}
+
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
             @if ($errors->any())
                 <div class="alert alert-danger my-4">

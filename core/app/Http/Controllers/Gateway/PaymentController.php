@@ -48,8 +48,8 @@ class PaymentController extends Controller
 
 
 
-            if($request->amount < 100) {
-                $notify =  "Amount can not be less than 100";
+            if($request->amount < 1000) {
+                $notify =  "Amount can not be less than NGN 1,000";
                 return back()->with('error', $notify);
             }
 
