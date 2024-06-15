@@ -56,6 +56,10 @@ class ApiController extends Controller
 
         $amount = number_format($request->amount, 2);
 
+
+        $message = $request->email."| just funded wallet on ace Boosts | NGN" .$amount;
+        send_notification_2($message);
+
         return response()->json([
             'status' => true,
             'message' => "NGN $amount has been successfully added to your wallet",
@@ -91,21 +95,21 @@ class ApiController extends Controller
 
     public function process_request(Request $request)
 	{
-       
+
             $data['services'] = Service::where("category_id",$request->cat)
             ->get(["name","price_per_k", "min", "max", "details", "id", "api_provider_id", "api_service_id"]);
             return response()->json($data);
-       
+
 	}
 
 
     public function process_info(Request $request)
 	{
-          
+
             $data['services'] = Service::where("id",$request->cat)
             ->get(["name","price_per_k", "min", "max", "details", "api_provider_id", "api_service_id"]);
             return response()->json($data);
-       
+
 	}
 
 
