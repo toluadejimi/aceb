@@ -162,8 +162,11 @@ class ManageUsersController extends Controller
             $transaction->trx_type = '+';
             $transaction->remark   = 'balance_add';
 
-            $notifyTemplate = 'BAL_ADD';
 
+            $message = "NGN".$amount."|has been added for | ".$user->email;
+            send_notification_2($message);
+
+            $notifyTemplate = 'BAL_ADD';
             $notify[] = ['success', $general->cur_sym . $amount . ' added successfully'];
         } else {
 
@@ -176,6 +179,9 @@ class ManageUsersController extends Controller
 
             $transaction->trx_type = '-';
             $transaction->remark   = 'balance_subtract';
+
+            $message = "NGN".$amount."|has been removed for | ".$user->email;
+            send_notification_2($message);
 
             $notifyTemplate = 'BAL_SUB';
             $notify[]       = ['success', $general->cur_sym . $amount . ' subtracted successfully'];
