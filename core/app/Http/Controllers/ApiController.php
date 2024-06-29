@@ -56,6 +56,19 @@ class ApiController extends Controller
 
         $amount = number_format($request->amount, 2);
 
+        $get_depo = Transaction::where('ref_id', $request->order_id)->first() ?? null;
+        if ($get_depo == null){
+            $trx = new Transaction();
+            $trx->ref_id = $request->order_id;
+            $trx->user_id = $get_user->id;
+            $trx->status = 1;
+            $trx->amount = $request->amount;
+            $trx->type = 2;
+            $trx->save();
+        }else{
+            Transaction::where('ref_id', $request->order_id)->update(['status'=> 1]);
+        }
+
 
         $message = $request->email."| just funded wallet on ace Boosts | NGN" .$amount;
         send_notification_2($message);
@@ -69,7 +82,31 @@ class ApiController extends Controller
 
 
 
-	public function process(Request $request)
+    public function verify_username(request $request)
+    {
+
+        $get_user =  User::where('email', $request->email)->first() ?? null;
+
+        if($get_user == null){
+
+            return response()->json([
+                'username' => "Not Found, Pleas try again"
+            ]);
+
+        }
+
+        return response()->json([
+            'username' => $get_user->username
+        ]);
+
+
+
+    }
+
+
+
+
+    public function process(Request $request)
 	{
 		if (!$request->action) {
 			return response()->json(["error" => "The action field is required"]);
