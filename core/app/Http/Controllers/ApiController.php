@@ -59,7 +59,7 @@ class ApiController extends Controller
 
         $get_depo = Deposit::where('trx', $request->order_id)->first() ?? null;
         if ($get_depo == null){
-            $trx = new Transaction();
+            $trx = new Deposit();
             $trx->trx = $request->order_id;
             $trx->user_id = $get_user->id;
             $trx->status = 1;
