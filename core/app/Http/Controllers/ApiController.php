@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Constants\Status;
 use App\Models\AdminNotification;
+use App\Models\Deposit;
 use App\Models\GeneralSetting;
 use App\Models\Order;
 use App\Models\Service;
@@ -56,7 +57,7 @@ class ApiController extends Controller
 
         $amount = number_format($request->amount, 2);
 
-        $get_depo = Transaction::where('trx', $request->order_id)->first() ?? null;
+        $get_depo = Deposit::where('trx', $request->order_id)->first() ?? null;
         if ($get_depo == null){
             $trx = new Transaction();
             $trx->trx = $request->order_id;
@@ -66,7 +67,7 @@ class ApiController extends Controller
             $trx->type = 2;
             $trx->save();
         }else{
-            Transaction::where('trx', $request->order_id)->update(['status'=> 1]);
+            Deposit::where('trx', $request->order_id)->update(['status'=> 1]);
         }
 
 
