@@ -56,17 +56,17 @@ class ApiController extends Controller
 
         $amount = number_format($request->amount, 2);
 
-        $get_depo = Transaction::where('ref_id', $request->order_id)->first() ?? null;
+        $get_depo = Transaction::where('trx', $request->order_id)->first() ?? null;
         if ($get_depo == null){
             $trx = new Transaction();
-            $trx->ref_id = $request->order_id;
+            $trx->trx = $request->order_id;
             $trx->user_id = $get_user->id;
             $trx->status = 1;
             $trx->amount = $request->amount;
             $trx->type = 2;
             $trx->save();
         }else{
-            Transaction::where('ref_id', $request->order_id)->update(['status'=> 1]);
+            Transaction::where('trx', $request->order_id)->update(['status'=> 1]);
         }
 
 
