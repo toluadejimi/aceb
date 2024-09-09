@@ -42,7 +42,7 @@
             <div class="d-flex justify-content-center my-5">
 
                 <div class="btn-group" role="group" aria-label="Third group">
-                    <a style="font-size: 12px; color: white; background: #03103a;" href="https://aceboosts.com" target="_blank" class="btn btn w-200 mt-1"><svg width="131" height="15" viewBox="0 0 131 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <a style="font-size: 12px; color: white; background: #03103a;" href="https://acelogstore.com/" target="_blank" class="btn btn w-200 mt-1"><svg width="131" height="15" viewBox="0 0 131 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect width="131" height="15" fill="url(#pattern0_240_66)"/>
                             <defs>
                                 <pattern id="pattern0_240_66" patternContentUnits="objectBoundingBox" width="1" height="1">

@@ -71,6 +71,7 @@ class ApiController extends Controller
         }
 
 
+
         $message = $request->email."| just funded wallet on ace Boosts | NGN" .$amount;
         send_notification_2($message);
 

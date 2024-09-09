@@ -370,7 +370,7 @@
                 <div  class="card-body">
 
                     <h5 class="d-flex justify-content-center text-white">NEED HELP?</h5>
-                    <p class="d-flex justify-content-center text-white">Send a message on Whatsapp using the  <a href="https://api.whatsapp.com/send?phone=2348123053541&text=Hello, i want to make report."> Link</a></p>
+                    <p class="d-flex justify-content-center text-white">Send a message on Telegram using the <a href="https://t.me/aceboostss">Link</a></p>
 
 
                 </div>

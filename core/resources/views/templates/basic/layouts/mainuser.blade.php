@@ -392,7 +392,7 @@ Sidebar end
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://chat.whatsapp.com/E6cxlJmfLrK6Q7oly0hdKc" class="float" target="_blank">
+    <a href="https://t.me/aceboostss" class="float" target="_blank">
         <i class="fa fa-comment my-float"></i>
     </a>
 
