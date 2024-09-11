@@ -27,7 +27,7 @@
               height:60px;
               bottom:40px;
               right:40px;
-              background-color:#25d366;
+              background-color: #001948;
               color:#FFF;
               border-radius:50px;
               text-align:center;
@@ -406,8 +406,8 @@
 
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <a style="color: white" href=" https://chat.whatsapp.com/E6cxlJmfLrK6Q7oly0hdKc" class="float" target="_blank">
-            <i class="fa fa-whatsapp my-float"></i>
+        <a style="color: white" href="https://t.me/aceboostss" class="float" target="_blank">
+            <i class="fa fa-comment"></i>
         </a>
 
 
