@@ -335,7 +335,7 @@
                                 .price_per_k;
                             document.getElementById('min').innerHTML = value.min;
                             document.getElementById('max').innerHTML = value.max;
-                            document.getElementById('details').innerHTML = value.name;
+                            document.getElementById('details').innerHTML = value.details;
 
 
                             const price2 = document.getElementById('price').value =
