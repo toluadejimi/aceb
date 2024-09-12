@@ -134,8 +134,7 @@ class ApiController extends Controller
 
     public function process_request(Request $request)
 	{
-
-            $data['services'] = Service::where("category_id",$request->cat)
+            $data['services'] = Service::where("category_id",$request->cat)->where('status', 1)
             ->get(["name","price_per_k", "min", "max", "details", "id", "api_provider_id", "api_service_id"]);
             return response()->json($data);
 
