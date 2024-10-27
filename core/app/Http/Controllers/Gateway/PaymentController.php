@@ -70,7 +70,7 @@ class PaymentController extends Controller
             $ref = trx_id();
             $email = Auth::user()->email;
 
-            $url = "https://web.enkpay.com/pay?amount=$request->amount&key=$key&ref=$ref&email=$email";
+            $url = "https://web.sprintpay.online/pay?amount=$request->amount&key=$key&ref=$ref&email=$email";
 
 
             $data = new Deposit();
@@ -164,7 +164,7 @@ class PaymentController extends Controller
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-                CURLOPT_URL => 'https://web.enkpay.com/api/verify',
+                CURLOPT_URL => 'https://web.sprintpay.online/api/verify',
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => '',
                 CURLOPT_MAXREDIRS => 10,
@@ -198,7 +198,7 @@ class PaymentController extends Controller
                 $databody = array('order_id' => "$order_id");
 
                 curl_setopt_array($curl, array(
-                    CURLOPT_URL => 'https://web.enkpay.com/api/resolve-complete',
+                    CURLOPT_URL => 'https://web.sprintpay.online/api/resolve-complete',
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => '',
                     CURLOPT_MAXREDIRS => 10,

@@ -435,7 +435,7 @@ function resolve_complete($order_id)
     $databody = array('order_id' => "$order_id");
 
     curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://web.enkpay.com/api/resolve-complete',
+        CURLOPT_URL => 'https://web.sprintpay.online/api/resolve-complete',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
@@ -473,7 +473,7 @@ function verify_trx($trx)
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://web.enkpay.com/api/verify',
+        CURLOPT_URL => 'https://web.sprintpay.online/api/verify',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
@@ -511,7 +511,7 @@ function session_resolve($ref, $session_id)
     );
 
     curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://web.enkpay.com/api/resolve',
+        CURLOPT_URL => 'https://web.sprintpay.online/api/resolve',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
